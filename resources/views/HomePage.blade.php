@@ -10,6 +10,10 @@
     <header>
         
             <!-- Logo, navbar dan menunya -->
+    <div class="pointer-events-none absolute inset-x-0 -top-10 z-10
+                h-40 bg-linear-to-b from-black
+                via-black/60 to-transparent">
+    </div>
 
         <nav class="absolute top-0 left-0 z-50 w-full
             bg-linear-to-b from-black via-black/60 to-transparent
