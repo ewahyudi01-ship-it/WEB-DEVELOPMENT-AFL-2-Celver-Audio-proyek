@@ -1,0 +1,17 @@
+.hero-banner {
+    background-image: url('/images/1_image.jpeg');
+    background-size: cover;
+    background-position: center;
+    height: 1000px;
+}
+
+@media (max-width: 786px){
+
+    .background-adjust-mobile {
+        background-image: url("/images/1_image.jpeg");
+        background-size: auto 60%;
+        background-position: top;
+        background-repeat: no-repeat;
+    }
+
+}

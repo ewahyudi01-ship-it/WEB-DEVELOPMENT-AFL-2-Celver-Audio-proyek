@@ -4,6 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+    <link rel="stylesheet" href="{{ asset('style.css') }}">
+
     <title>Document</title>
 </head>
 <body>
@@ -21,7 +25,7 @@
             <div class="mx-auto flex max-w-7xl items-center justify-between">
                 <a href="/" class="text-xl font-bold">CELVER AUDIO</a>
 
-                <div class="flex gap-6">
+                <div class="flex gap-6 text-xs lg:text-base">
                     <a href="/">Home</a>
                     <a href="/about">About</a>
                     <a href="/contact">Contact</a>
@@ -29,9 +33,23 @@
             </div>
         </nav>
 
+        <section class="hero-banner background-adjust-mobile bg-parallax"></section>
+        <div class="absolute inset-0 z-[1] bg-black/20"></div>
+
+        <div id="logo-intro" class="absolute inset-0 z-40 -top-100 lg:-top-50 flex items-center justify-center">
+            <img src="{{ asset('images/Celver Audio.png') }} "alt="Logo" class="w-40 md:w-56">
+        </div>
+        
+        <div class ="absolute inset-0 items-center justify-center flex z-20"> 
+            <h2 class ="relative text-white font-bold -top-10 lg:top-10 text-2xl lg:text-4xl text-shadow-[2px_2px_6px_rgba(0,0,0,0.3)] text-center"><?= $tagLine; ?></h2>
+        </div>
+       
+
     </header>
 
     <main>
+
+  
         <section>
             <!-- Rekam jejak section -->
 
@@ -48,4 +66,19 @@
 
     </footer>
 </body>
+<script>
+    gsap.registerPlugin(ScrollTrigger);
+
+      gsap.to(".bg-parallax", {
+        y: "30%", // Menggeser div background sebesar 20% dari tingginya seiring scroll
+        ease: "none",
+        scrollTrigger: {
+            trigger: ".bg-parallax",
+            start: "top",
+            end: "bottom top",
+            scrub: 1 // Nilai 1 membuat efeknya terasa 'membal' halus (smooth catch-up)
+        }
+    });
+
+</script>
 </html>
