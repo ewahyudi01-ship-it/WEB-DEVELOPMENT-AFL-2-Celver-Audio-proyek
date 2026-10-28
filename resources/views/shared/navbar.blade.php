@@ -1,4 +1,9 @@
-<nav class="absolute top-0 left-0 z-50 w-full
+<div class="pointer-events-none absolute inset-x-0 -top-10 z-10
+                h-40 bg-linear-to-b from-black
+                via-black/60 to-transparent">
+    </div>
+
+<nav class="fixed top-0 left-0 z-50 w-full
             bg-linear-to-b from-black via-black/60 to-transparent
             px-6 py-5 text-white">
             <div class="mx-auto flex max-w-7xl items-center justify-between">
