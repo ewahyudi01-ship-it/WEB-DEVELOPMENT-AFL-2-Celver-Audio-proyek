@@ -84,7 +84,7 @@
 
         gsap.from("#intro", {
         y: 50,
-        opacity: 1,
+        opacity: 0,
         duration: 2
     });
 
