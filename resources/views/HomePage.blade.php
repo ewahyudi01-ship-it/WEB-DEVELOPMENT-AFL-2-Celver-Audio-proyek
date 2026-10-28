@@ -57,9 +57,92 @@
         </section>
     </main>
 
-    <footer>
-        <!-- Kontak dan copyright -->
+    <footer class="relative w-full text-neutral-300 pt-16 pb-8 font-sans overflow-hidden border-t border-amber-900/30">
+    <!-- Background Image dengan Overlay Gelap agar Gradasi Menyambung -->
+    <div class="absolute inset-0 z-0 pointer-events-none">
+        <img src="{{ asset('images/custom-bgColor.jpg.jpeg') }}" alt="Footer Background" class="w-full h-full object-cover">
+        <div class="absolute inset-0 bg-neutral-950/80 backdrop-blur-sm"></div>
+    </div>
 
+    <div class="relative z-10 container mx-auto px-6 lg:px-12 max-w-7xl">
+        
+        <!-- Bagian Atas: 4 Kolom Navigasi & Newsletter -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16 border-t border-amber-500/10 pt-10">
+            
+            <!-- Kolom 1: Products -->
+            <div>
+                <h3 class="text-amber-400 text-lg font-medium mb-6">Products</h3>
+                <ul class="space-y-3 text-sm tracking-wide text-neutral-400">
+                    <li><a href="#" class="hover:text-amber-300 transition-colors">Celver Platform</a></li>
+                    <li><a href="#" class="hover:text-amber-300 transition-colors">Audio Engine</a></li>
+                    <li><a href="#" class="hover:text-amber-300 transition-colors">Sound Library</a></li>
+                    <li><a href="#" class="hover:text-amber-300 transition-colors">Integrations</a></li>
+                </ul>
+            </div>
+
+            <!-- Kolom 2: Resources -->
+            <div>
+                <h3 class="text-amber-400 text-lg font-medium mb-6">Resources</h3>
+                <ul class="space-y-3 text-sm tracking-wide text-neutral-400">
+                    <li><a href="#" class="hover:text-amber-300 transition-colors">Blog</a></li>
+                    <li><a href="#" class="hover:text-amber-300 transition-colors">Guides</a></li>
+                    <li><a href="#" class="hover:text-amber-300 transition-colors">Documentation</a></li>
+                    <li><a href="#" class="hover:text-amber-300 transition-colors">Community</a></li>
+                </ul>
+            </div>
+
+            <!-- Kolom 3: Company -->
+            <div>
+                <h3 class="text-amber-400 text-lg font-medium mb-6">Company</h3>
+                <ul class="space-y-3 text-sm tracking-wide text-neutral-400">
+                    <li><a href="/about" class="hover:text-amber-300 transition-colors">About Us</a></li>
+                    <li><a href="/project" class="hover:text-amber-300 transition-colors">Our Projects</a></li>
+                    <li><a href="#" class="hover:text-amber-300 transition-colors">Careers</a></li>
+                    <li><a href="#" class="hover:text-amber-300 transition-colors">Contact</a></li>
+                </ul>
+            </div>
+
+            <!-- Kolom 4: Newsletter -->
+            <div>
+                <h3 class="text-amber-400 text-lg font-medium mb-6">Sign up for our newsletter to stay up to date</h3>
+                <form class="flex flex-col gap-4">
+                    <input type="email" placeholder="Your email" class="w-full bg-neutral-900/60 border border-neutral-800 rounded-md px-4 py-2.5 text-white placeholder-neutral-500 focus:outline-none focus:border-amber-400 focus:ring-1 focus:ring-amber-400 transition">
+                    <div class="flex justify-end">
+                        <button type="button" class="bg-amber-400 text-neutral-950 font-semibold px-6 py-2.5 rounded-md hover:bg-amber-300 transition shadow-lg shadow-amber-500/10">Subscribe</button>
+                    </div>
+                </form>
+                
+                <!-- Sosmed -->
+                <div class="flex justify-end gap-4 mt-6">
+                    <a href="#" class="text-neutral-500 hover:text-amber-300 transition">IN</a>
+                    <a href="#" class="text-neutral-500 hover:text-amber-300 transition">X</a>
+                    <a href="#" class="text-neutral-500 hover:text-amber-300 transition">YT</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bagian Tengah: Teks Outline Raksasa bersinar Emas Tipis -->
+        <div class="flex justify-center items-center mb-10 overflow-hidden pointer-events-none select-none">
+            <h1 class="text-[11vw] font-extrabold leading-none tracking-tighter" 
+                style="-webkit-text-stroke: 1px rgba(251, 191, 36, 0.25); color: transparent;">
+                CELVER AUDIO
+            </h1>
+        </div>
+
+        <!-- Bagian Bawah: Copyright & Status -->
+        <div class="flex flex-col md:flex-row justify-between items-center text-xs text-neutral-500 border-t border-neutral-800/80 pt-6">
+            <div class="flex items-center gap-2 mb-4 md:mb-0">
+                <div class="w-2 h-2 rounded-full bg-amber-500 animate-pulse"></div>
+                <span>All systems operational</span>
+            </div>
+            
+            <div class="flex gap-6">
+                <a href="#" class="hover:text-neutral-300 transition">Privacy policy</a>
+                <a href="#" class="hover:text-neutral-300 transition">Terms of service</a>
+            </div>
+        </div>
+
+    </div>
     </footer>
 </body>
 <script>
