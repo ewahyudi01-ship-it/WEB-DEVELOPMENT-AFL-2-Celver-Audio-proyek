@@ -10,26 +10,23 @@
 
     <title>Document</title>
 </head>
-<body>
+<body class="bg-[rgb(11,11,11)]">
     <header class="relative w-full h-[80vh] lg:w-full lg:h-auto overflow-hidden z-30">
 
         @include('shared.navbar')
 
-    <picture>
         <img
             src="{{ asset('images/1_image.jpeg') }}"
             alt="Celver Audio"
             class="bg-parallax w-full object-cover h-full lg:w-full lg:h-auto">
-    </picture>
 
         <div class="absolute inset-0 bg-black/20 "></div>
         
         <div id="intro" class ="absolute inset-0 items-center justify-center flex flex-col -top-75 lg:-top-25 z-20"> 
-            <h2 class ="relative text-white font-bold top-35 lg:top-10 text-2xl lg:text-4xl text-shadow-lg/30 text-center"><?= $tagLine; ?></h2>
+            @foreach($taglines as $tagLine)
+            <h2 class ="relative text-white font-bold top-35 lg:top-10 text-2xl lg:text-4xl text-shadow-lg/30 text-center"><?= $tagLine->text; ?></h2>
             <br>
-            <h2 class ="relative text-white font-bold top-35 lg:top-10 text-2xl lg:text-4xl text-shadow-lg/30 text-center"><?= $tagLine2; ?></h2>
-            <br>
-            <h2 class ="relative text-white font-bold top-35 lg:top-10 text-2xl lg:text-4xl text-shadow-lg/30 text-center"><?= $tagLine3; ?></h2>
+            @endforeach
         </div>
        
 
@@ -56,36 +53,22 @@
         <div id='item-parallax'class="absolute inset-0 rounded-4xl lg:left-250 lg:top-30 lg:w-[20vh] lg:h-[13vh] outline-1 outline-yellow-200/50 flex items-center justify-center"></div>
         <div id='item-parallax'class="absolute inset-0 rounded-4xl lg:left-410 lg:top-130 lg:w-[6vh] lg:h-[6vh] outline-1 outline-yellow-200/50 flex items-center justify-center"></div>
 
+        @foreach($layanans as $layanan)
         <div class="w-full">
             <div class="w-full rounded-2xl overflow-hidden flex flex-col h-90 relative bg-black/50 group/card border border-white/10 p-6 text-white backdrop-blur-sm">
                 <img class="object-cover w-full h-full absolute inset-0 group-hover/card:scale-125 transition-transform duration-300 entered litespeed-loaded"
                 alt="gambar1"
-                src="{{ asset('images/gambar_layanan3.jpeg') }}">
+                src="{{ asset('images/' . $layanan->image) }}">
                 
                 <div class="absolute left-0 w-full bottom-0 after:absolute after:inset-0 after:bg-gradient-to-t after:from-black/80 ">
                     <div class="p-4 md:p-8 flex flex-col gap-1 relative z-10">
-                        <h2 class="font-bold shadow-xl text-3xl text-shadow-lg/40 mb-2">Installation</h2>
-                        <p class="text-xs text-shadow-lg/30 mb-2">Sound system installation for local-level events. Personalized Tailored sound system configuration according to specialized experience of clubs/cafes/home system/etc.</p>
+                        <h2 class="font-bold shadow-xl text-3xl text-shadow-lg/40 mb-2"><?= $layanan->title ?></h2>
+                        <p class="text-xs text-shadow-lg/30 mb-2"><?= $layanan->description ?></p>
                     </div>
                 </div>
             </div>
         </div>
-
-        <div class="w-full">
-            <div class="w-full rounded-2xl overflow-hidden flex flex-col h-90 relative bg-black/50 group/card border border-white/10 p-6 text-white backdrop-blur-sm">
-                <img class="object-cover w-full h-full absolute inset-0 group-hover/card:scale-125 transition-transform duration-300 entered litespeed-loaded"
-                alt="gambar1"
-                src="{{ asset('images/gambar_layanan2.jpeg') }}">
-                
-                <div class="absolute left-0 w-full bottom-0 after:absolute after:inset-0 after:bg-gradient-to-t after:from-black/70 ">
-                    <div class="p-4 md:p-8 flex flex-col gap-1 relative z-10">
-                        <h2 class="font-bold shadow-xl text-3xl text-shadow-lg/40 mb-2">Calibration & Tuning</h2>
-                        <p class="text-xs text-shadow-lg/30 mb-2">Checking the sound system to ensure high quality sounds produce. Configures simple to complex audio software, architecting acoustic layout, procure best quality/value audio equipment</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
+        @endforeach
         
 
     </div>
