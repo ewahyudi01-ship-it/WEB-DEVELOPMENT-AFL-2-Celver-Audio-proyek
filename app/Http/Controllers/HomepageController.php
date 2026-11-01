@@ -9,7 +9,9 @@ class HomepageController extends Controller
 {
     public function view(){
         return view('HomePage',[
-        "tagLine" => "Precision Installation. Performance. For every moments."
+        'tagLine' => "Precision Installation",
+        'tagLine2' => "Performance",
+        'tagLine3' => "For every moments"
         ]);
     }
 

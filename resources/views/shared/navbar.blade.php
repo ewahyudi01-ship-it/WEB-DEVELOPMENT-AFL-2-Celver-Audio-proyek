@@ -3,16 +3,20 @@
                 via-black/60 to-transparent">
     </div>
 
-<nav class="fixed top-0 left-0 z-50 w-full
-            bg-linear-to-b from-black via-black/60 to-transparent
-            px-6 py-5 text-white">
-            <div class="mx-auto flex max-w-7xl items-center justify-between">
-                <a href="/" class="text-xl font-bold">CELVER AUDIO</a>
+<nav class="fixed top-0 z-60 w-full bg-linear-to-b from-black via-black/60 to-transparent py-5 text-white">
+        <div class="mx-auto grid max-w-7xl grid-cols-3 items-center px-4">
+            <div class="flex justify-start">
+        </div>
 
-                <div class="flex gap-6 text-xs lg:text-base">
-                    <a href="/">Home</a>
-                    <a href="/about">About</a>
-                    <a href="/contact">Contact</a>
+            <a href="/" class="relative flex items-center text-base font-bold lg:text-3xl">
+                <div class="flex items-center justify-center z-40 w-full">
+                    <img src="{{ asset('images/Celver-Audio.png') }}" alt="Celver Audio" class="w-35 lg:w-50 ">
                 </div>
-            </div>
+            </a>
+
+        <div class="flex justify-end gap-6 text-xs lg:text-base">
+            <a href="/about">About</a>
+            <a href="/contact">Contact</a>
+        </div>
+    </div>
         </nav>
