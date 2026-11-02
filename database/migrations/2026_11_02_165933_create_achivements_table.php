@@ -11,7 +11,13 @@ return new class extends Migration
      */
     public function up(): void
     {
-        //
+        Schema::create('achivements', function (Blueprint $table) {
+            $table->id();
+            $table->text('yearsDesc');
+            $table->text('trustedDesc');
+            $table->text('expertiseDesc');
+            $table->timestamps();
+        });
     }
 
     /**
@@ -19,6 +25,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        //
+        Schema::dropIfExists('achivements');
     }
 };
