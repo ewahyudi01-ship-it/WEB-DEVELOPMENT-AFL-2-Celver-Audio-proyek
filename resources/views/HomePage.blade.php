@@ -127,14 +127,14 @@
         
         <div class="flex flex-col md:flex-row justify-between gap-12 mb-16 border-t border-amber-500/10 pt-10">
 
-            <div class="md:w-1/2">
+            <div id="aboutSection" class="md:w-1/2">
                 <h3 class="text-amber-400 text-xl font-bold mb-4">About Us</h3>
                 <p class="text-neutral-400 leading-relaxed text-sm">
                    {{ $abouts->aboutUsDesc }}
             </div>
 
             
-            <div class="md:w-1/3 md:text-right">
+            <div id="contactSection" class="md:w-1/3 md:text-right">
                 <h3 class="text-amber-400 text-xl font-bold mb-4">Contact</h3>
                 <div class="space-y-2 text-sm text-neutral-400">
                     <p>Email: {{ $contacts->gmail }}</p>

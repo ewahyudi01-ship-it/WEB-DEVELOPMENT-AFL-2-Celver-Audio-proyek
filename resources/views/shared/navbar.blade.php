@@ -14,8 +14,8 @@
             </a>
 
             <div class="flex justify-end gap-6 text-xs lg:text-base">
-                <a href="/about">About</a>
-                <a href="/contact">Contact</a>
+                <a href="#aboutSection">About</a>
+                <a href="#contactSection">Contact</a>
             </div>
         </div>
     </div>
