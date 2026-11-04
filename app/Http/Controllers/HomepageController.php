@@ -18,9 +18,6 @@ class HomepageController extends Controller
         $achivements = Achivement::first();
 
         return view('HomePage',[
-        'tagLine' => "Precision Installation",
-        'tagLine2' => "Performance",
-        'tagLine3' => "For every moments",
         'layanans' => $layanans,
         'contacts' => $contacts,
         'achivements' => $achivements,
