@@ -8,7 +8,7 @@
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
     <link rel="stylesheet" href="{{ asset('style.css') }}">
 
-    <title>Document</title>
+    <title>Celver Audio Profile</title>
 </head>
 <body class="bg-[rgb(11,11,11)]">
     <header class="relative w-full h-[80vh] lg:w-full lg:h-auto overflow-hidden z-30">
