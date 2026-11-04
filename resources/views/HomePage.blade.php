@@ -115,7 +115,6 @@
         </section>
     </main>
 
-     <!-- Masih nunggu client -->
     <footer class="relative w-full h-screen text-neutral-300 pt-16 pb-8 font-sans overflow-hidden border-t border-amber-900/30">
     
     <div class="absolute inset-0 z-0 pointer-events-none">
