@@ -13,7 +13,6 @@ class HomepageController extends Controller
 {
     public function view(){
         $layanans = Layanan::all();
-        $taglines = Tagline::all();
         $abouts = Abouts::first();
         $contacts = Contact::first();
         $achivements = Achivement::first();
@@ -23,7 +22,6 @@ class HomepageController extends Controller
         'tagLine2' => "Performance",
         'tagLine3' => "For every moments",
         'layanans' => $layanans,
-        'taglines' => $taglines,
         'contacts' => $contacts,
         'achivements' => $achivements,
         'abouts' => $abouts

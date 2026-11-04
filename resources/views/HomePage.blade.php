@@ -23,10 +23,11 @@
         <div class="absolute inset-0 bg-black/20 "></div>
         
         <div id="intro" class ="absolute inset-0 items-center justify-center flex flex-col -top-75 lg:-top-25 z-20"> 
-            @foreach($taglines as $tagLine)
-            <h2 class ="relative text-white font-bold top-35 lg:top-10 text-2xl lg:text-4xl text-shadow-lg/30 text-center"><?= $tagLine->text; ?></h2>
+            <h2 class ="relative text-white font-bold top-35 lg:top-10 text-2xl lg:text-4xl text-shadow-lg/30 text-center">Precision Installation</h2>
             <br>
-            @endforeach
+            <h2 class ="relative text-white font-bold top-35 lg:top-10 text-2xl lg:text-4xl text-shadow-lg/30 text-center">Performance</h2>
+            <br>
+            <h2 class ="relative text-white font-bold top-35 lg:top-10 text-2xl lg:text-4xl text-shadow-lg/30 text-center">For every moments</h2>            
         </div>
        
 
