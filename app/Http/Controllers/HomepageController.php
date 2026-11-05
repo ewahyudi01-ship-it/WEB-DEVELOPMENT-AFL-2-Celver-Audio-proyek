@@ -5,7 +5,6 @@ namespace App\Http\Controllers;
 use App\Models\Achivement;
 use App\Models\Contact;
 use App\Models\Abouts;
-use App\Models\Tagline;
 use Illuminate\Http\Request;
 use App\Models\Layanan;
 
