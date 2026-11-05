@@ -76,7 +76,7 @@
 
     </section>
     
-        <section class ="relative grid grid-cols-2 w-full">
+        <section id="achivementSection" class ="relative grid grid-cols-2 w-full">
              <div class="flex flex-col justify-center w-full lg:w-full lg:pr-16 text-left lg:mx-45 my-30">
                 <h2 class="text-4xl lg:text-6xl font-bold text-white mb-8 lg:mb-12 tracking-wide drop-shadow-lg">
                     Our <span class="text-amber-400">Achievements</span>

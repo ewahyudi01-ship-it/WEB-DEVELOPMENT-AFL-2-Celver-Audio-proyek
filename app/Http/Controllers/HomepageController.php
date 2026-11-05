@@ -5,7 +5,6 @@ namespace App\Http\Controllers;
 use App\Models\Achivement;
 use App\Models\Contact;
 use App\Models\Abouts;
-use App\Models\Tagline;
 use Illuminate\Http\Request;
 use App\Models\Layanan;
 
@@ -18,9 +17,6 @@ class HomepageController extends Controller
         $achivements = Achivement::first();
 
         return view('HomePage',[
-        'tagLine' => "Precision Installation",
-        'tagLine2' => "Performance",
-        'tagLine3' => "For every moments",
         'layanans' => $layanans,
         'contacts' => $contacts,
         'achivements' => $achivements,

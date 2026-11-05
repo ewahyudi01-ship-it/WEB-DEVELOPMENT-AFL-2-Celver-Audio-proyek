@@ -14,6 +14,7 @@
             </a>
 
             <div class="flex justify-end gap-6 text-xs lg:text-base">
+                <a href="#achivementSection">Achivements</a>
                 <a href="#aboutSection">About</a>
                 <a href="#contactSection">Contact</a>
             </div>
