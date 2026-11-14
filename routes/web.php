@@ -16,4 +16,4 @@ Route::get('/testing/form', [TestingController::class, 'create']);
 Route::post('/save-form', [TestingController::class, 'store'])->name('save-laptop');
 Route::post('/delete-form', [TestingController::class, 'destroy'])->name('delete-laptop');
 Route::get('/edit-form/{testing}', [TestingController::class, 'edit'])->name('edit-laptop');
-Route::post('/update-form/{testing}', [TestingController::class, 'update'])->name('update-laptop');
+Route::post('/update-form/{testing}', [TestingController::class, 'update'])->name('update-laptop'); 
