@@ -14,7 +14,7 @@ class HomepageController extends Controller
         $layanans = Layanan::all();
         $abouts = Abouts::first();
         $contacts = Contact::first();
-        $achivements = Achivement::first();
+        $achivements = Achivement::all();
 
         return view('HomePage',[
         'layanans' => $layanans,

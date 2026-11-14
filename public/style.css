@@ -1,3 +1,8 @@
+
+@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
+@source '../../storage/framework/views/*.php';
+
+
 .hero-banner {
     background-image: url('/images/1_image.jpeg');
     background-size: cover;
@@ -14,4 +19,19 @@
         background-repeat: no-repeat;
     }
 
+}
+
+@theme {
+    --font-sans: 'Outfit', sans-serif;
+    --font-outfit: 'Outfit', sans-serif;
+}
+@font-face {
+    font-family: 'Outfit';
+    src: url('/fonts/Outfit-VariableFont_wght.ttf') format('truetype');
+    font-weight: 100 900;
+    font-style: normal;
+}
+
+body, nav {
+    font-family: 'Outfit', sans-serif !important;
 }

@@ -8,6 +8,7 @@ class Layanan extends Model
 {
     protected $fillable = [
         'title',
-        'description'
+        'description',
+        'image'
     ];
 }
