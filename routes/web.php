@@ -6,7 +6,7 @@ use App\Http\Controllers\ExploreController;
 use App\Http\Controllers\TestingController;
 
 
-Route::get('/', [HomepageController::class, 'view']);
+Route::get('/', [HomepageController::class, 'view'])->name('home-route');
 Route::get('/explore', [ExploreController::class, 'view']);
 
 
