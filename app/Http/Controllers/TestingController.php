@@ -15,7 +15,7 @@ class TestingController extends Controller
     public function index()
     {
         $testings = testing::all();
-        return view ('VenuePage',compact('testings'));
+        return view ('formList',compact('testings'));
     }
 
     /**

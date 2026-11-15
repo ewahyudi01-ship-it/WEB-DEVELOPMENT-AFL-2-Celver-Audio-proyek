@@ -35,3 +35,30 @@
 body, nav {
     font-family: 'Outfit', sans-serif !important;
 }
+
+.interior-reveal {
+    animation: interiorReveal 4s ease-in-out forwards;
+}
+@keyframes interiorReveal {
+    0% {
+        opacity: 1;
+        transform: scale(5.08);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1.5);
+    }
+}
+.scenery-reveal {
+    animation: sceneryReveal 4.2s ease-in-out forwards;
+}
+@keyframes sceneryReveal {
+    0% {
+        opacity: 1;
+        transform: scale(1.38);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}

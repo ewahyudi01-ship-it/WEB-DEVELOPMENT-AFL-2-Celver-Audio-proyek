@@ -12,15 +12,13 @@ class HomepageController extends Controller
 {
     public function view(){
         $layanans = Layanan::all();
-        $abouts = Abouts::first();
         $contacts = Contact::first();
         $achivements = Achivement::all();
 
         return view('HomePage',[
         'layanans' => $layanans,
         'contacts' => $contacts,
-        'achivements' => $achivements,
-        'abouts' => $abouts
+        'achivements' => $achivements
         ]);
     }
 

@@ -14,9 +14,15 @@ class VenueSeeder extends Seeder
     public function run(): void
     {
         Venue::create([
-            'titlePlace' => 'Cafe',
-            'descriptionPlace' => 'Checking the sound system to ensure high quality sounds produce. Configures simple to complex audio software, architecting acoustic layout, procure best quality/value audio equipment',
-            'image' => 'gambar_layanan2.jpeg',
+            'titlePlace' => 'Beach Club',
+            'descriptionPlace' => '',
+            'image' => '5_image.jpeg',
+        ]);
+
+        Venue::create([
+            'titlePlace' => 'CAFE',
+            'descriptionPlace' => '',
+            'image' => '6_image.jpeg',
         ]);
     }
 }
