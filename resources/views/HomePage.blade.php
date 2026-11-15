@@ -128,8 +128,8 @@
                 <div
                     class="absolute bottom-0 h-[20vh] bg-gradient-to-t w-full from-black/50 via-black/20 to-transparent z-20">
                 </div>
-            </section>
 
+            </section>
 
 
             <section id='achivementSection' class="relative w-full py-20 bg-[#120a06] text-white overflow-hidden">
@@ -186,7 +186,7 @@
 
                 <div class="flex flex-col md:flex-row justify-between gap-12 mb-16 border-t border-amber-500/10 pt-10">
 
-                    <div id="contactSection" class="md:w-1/3 md:text-right">
+                    <div id="contactSection" class="w-full md:text-right">
                         <h3 class="text-amber-400 text-xl font-bold mb-4">Contact</h3>
                         <div class="space-y-2 text-sm text-neutral-400">
                             <p>Email: {{ $contacts->gmail }}</p>
@@ -197,8 +197,7 @@
 
                 </div>
 
-                <div
-                    class="flex flex-col md:flex-row justify-between items-center text-xs text-neutral-500 border-t border-neutral-800/80 pt-6">
+                <div class="flex flex-col w-full items-center text-center text-xs text-neutral-500 border-t border-neutral-800/80 pt-6">
                     <p>&copy; 2026 Celver Audio. All rights reserved.</p>
                 </div>
 

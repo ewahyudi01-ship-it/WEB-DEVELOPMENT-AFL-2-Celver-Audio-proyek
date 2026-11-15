@@ -17,7 +17,7 @@
             <div class="flex justify-end gap-4 lg:gap-10 text-ms lg:text-xl">
                 <a href="{{ route('home-route') }}#achivementSection" class="font-[Outfit] hover:text-yellow-500 transition-all duration-200 ease-out">Achivements</a>
                 <a href="/explore" class="font-[Outfit] hover:text-yellow-500 transition-all duration-200 ease-out">About</a>
-                <a href="#contactSection" class="font-[Outfit] hover:text-yellow-500 transition-all duration-200 ease-out">Contact</a>
+                <a href="{{ route('home-route') }}#contactSection" class="font-[Outfit] hover:text-yellow-500 transition-all duration-200 ease-out">Contact</a>
             </div>
         </div>
     </div>

@@ -14,15 +14,21 @@ class VenueSeeder extends Seeder
     public function run(): void
     {
         Venue::create([
-            'titlePlace' => 'Beach Club',
+            'titlePlace' => 'BEACH CLUB',
             'descriptionPlace' => '',
             'image' => '5_image.jpeg',
         ]);
 
         Venue::create([
-            'titlePlace' => 'CAFE',
+            'titlePlace' => 'BAR',
             'descriptionPlace' => '',
             'image' => '6_image.jpeg',
+        ]);
+
+        Venue::create([
+            'titlePlace' => 'RESTAURANT',
+            'descriptionPlace' => '',
+            'image' => '7_image.jpeg',
         ]);
     }
 }

@@ -59,7 +59,7 @@
 
                                     <div class="flex flex-col flex-grow justify-between">
                                         <div>
-                                            <h4 class="font-[Outfit] text-amber-400 text-xl font-bold mb-2 line-clamp-1">
+                                            <h4 class="font-[Outfit] text-amber-400 text-xl font-bold mt-5 mb-2 line-clamp-1">
                                                 {{ $venue->titlePlace }}
                                             </h4>
                                             <p class="font-[Outfit] text-neutral-400 text-sm leading-relaxed line-clamp-3">
