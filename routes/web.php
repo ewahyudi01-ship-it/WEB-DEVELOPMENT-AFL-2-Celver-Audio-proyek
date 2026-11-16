@@ -9,7 +9,8 @@ use App\Http\Controllers\DashboardController;
 
 Route::get('/', [HomepageController::class, 'view'])->name('home-route');
 Route::get('/explore', [ExploreController::class, 'view']);
-Route::get('/dashboard', [DashboardController::class, 'view']);
+Route::get('/dashboard', [DashboardController::class, 'view'])->name('dashboard-route');
+Route::get('/dashboard/editpage', [DashboardController::class, 'viewEdit'])->name('editDashboard-route');
 
 
 Route::get('/testing', [TestingController::class, 'index']);

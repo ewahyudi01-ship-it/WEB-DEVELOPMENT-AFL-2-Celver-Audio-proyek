@@ -6,7 +6,7 @@
 
 <nav class="fixed z-60 w-full h-[10vh] text-white bg-linear-to-b from-black/70 via-black/40 to-transparent py-5">
     <div class="absolute inset-0 top-7 lg:top-1">
-        <div class="flex justify-center mx-auto w-full max-w-8xl grid grid-cols-2 items-center px-5 lg:px-90">
+        <div class="flex justify-center mx-auto w-full max-w-8xl grid grid-cols-2 items-center px-5 lg:px-30">
 
             <a href="/" class="relative flex items-center">
                 <div class="flex items-center z-40 w-full">
