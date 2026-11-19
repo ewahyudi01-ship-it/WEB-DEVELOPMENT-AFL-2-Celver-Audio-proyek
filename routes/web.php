@@ -5,12 +5,17 @@ use App\Http\Controllers\HomepageController;
 use App\Http\Controllers\ExploreController;
 use App\Http\Controllers\TestingController;
 use App\Http\Controllers\DashboardController;
-
+use App\Http\Controllers\ContactController;
 
 Route::get('/', [HomepageController::class, 'view'])->name('home-route');
-Route::get('/explore', [ExploreController::class, 'view']);
+Route::get('/explore', [ExploreController::class, 'view'])->name('about-route');
+Route::get('/contact', [ContactController::class, 'view'])->name('contact-route');
+
 Route::get('/dashboard', [DashboardController::class, 'view'])->name('dashboard-route');
-Route::get('/dashboard/editpage', [DashboardController::class, 'viewEdit'])->name('editDashboard-route');
+Route::get('/dashboard/editpage', [DashboardController::class, 'viewEditContent'])->name('editDashboard-route');
+Route::get('/dashboard/editBannerpage', [DashboardController::class, 'viewEditBanner'])->name('editBanner-route');
+
+
 
 
 Route::get('/testing', [TestingController::class, 'index']);

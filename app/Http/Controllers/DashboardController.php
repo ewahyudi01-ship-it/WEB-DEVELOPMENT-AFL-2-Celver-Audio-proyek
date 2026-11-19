@@ -8,13 +8,18 @@ class DashboardController extends Controller
 {
     public function view()
     {
-
         return view('dashboard');
     }
 
-    public function viewEdit()
+    public function viewEditContent()
     {
 
         return view('editPageDashboard');
+    }
+
+    public function viewEditBanner()
+    {
+
+        return view('editPageBannerDashboard');
     }
 }

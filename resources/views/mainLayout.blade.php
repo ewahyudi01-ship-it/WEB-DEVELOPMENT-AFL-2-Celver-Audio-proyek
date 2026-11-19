@@ -81,6 +81,17 @@
             duration: 1
         });
 
+        gsap.from("#intro-stars", {
+            y: -5,
+            opacity: 0,
+            duration: 10
+        });
+
+        gsap.from("#intro-contact-banner", {
+            y: 0,
+            opacity: 0,
+            duration: 3
+        });
 
     </script>
 </html>
