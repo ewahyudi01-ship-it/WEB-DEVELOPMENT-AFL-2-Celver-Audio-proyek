@@ -2,13 +2,19 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Message;
 use Illuminate\Http\Request;
+
 
 class DashboardController extends Controller
 {
     public function view()
     {
-        return view('dashboard');
+        // $message = Message::all();
+        return view ('dashboard');
+
+                // return view ('dashboard',compact('message'));
+
     }
 
     public function viewEditContent()
@@ -22,4 +28,25 @@ class DashboardController extends Controller
 
         return view('editPageBannerDashboard');
     }
+
+
+
+    public function destroy(\Illuminate\Http\Request $request)
+    {
+        testing::destroy($request->id);
+        return redirect('/testing');
+    }
+
+
+
+    public function showNotification()
+    {
+        $message = Message::all();
+
+        return view('notificationPage',[
+        'messages' => $message,
+        ]);
+    }
+
+
 }

@@ -46,7 +46,7 @@
                     <span class="text-white group-hover:text-amber-400 text-xl group-hover:translate-x-1 transition z-10">Edit Banner</span>
                 </a>
 
-                <a href="{{ url('/#achivementSection') }}"
+                <a href="{{ route('notification-route') }}"
                     class="col-span-2 row-span-4 relative overflow-hidden bg-gradient-to-br from-amber-900/15 via-neutral-900/80 to-neutral-950/90 border border-amber-500/20 hover:border-amber-400/70 bg-amber-800/20 hover:bg-amber-700/60  rounded-br-[65px] transition duration-300 p-6 flex flex-col justify-end group">
 
                       <img src="{{ asset('images/notifLogo.png') }}" alt="Edit Contents"

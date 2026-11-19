@@ -31,13 +31,14 @@ class TestingController extends Controller
      */
     public function store(\Illuminate\Http\Request $request)
     {
-        testing::create([
-            "brands" => "$request->brands",
-            "model" => "$request->model",
-            "processor" => "$request->processor",
-            "ram" => "$request->ram"
-        
+        $data = $request->validate([
+        'brands' => 'required|string|max:150|min:1',
+        'model' => 'required|string|max:150|min:1',
+        'processor' => 'required|string|max:150|min:1',
+        'ram' => 'required|numeric|min:0',
         ]);
+
+        testing::create($data);
 
         return redirect('/testing');
     }
@@ -63,12 +64,14 @@ class TestingController extends Controller
      */
     public function update(\Illuminate\Http\Request $request, testing $testing)
     {
-        $testing->update([
-        'brands'    => $request->brands,
-        'model'     => $request->model,
-        'processor' => $request->processor,
-        'ram'       => $request->ram,
-    ]);
+        $data = $request->validate([
+        'brands' => 'required|string|max:150|min:1',
+        'model' => 'required|string|max:150|min:1',
+        'processor' => 'required|string|max:150|min:1',
+        'ram' => 'required|numeric|min:0',
+        ]);
+
+        $testing->update($data);
 
     return redirect('/testing');
     }

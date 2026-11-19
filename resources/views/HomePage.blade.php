@@ -95,20 +95,16 @@
                             </h2>
                         </div>
 
-                        <div
-                            class="w-full h-auto overflow-x-auto flex flex-nowrap gap-5 lg:gap-12 pb-6 snap-x snap-mandatory scrollbar-track-sky-100">
+                        <div class="w-full h-auto overflow-x-auto flex flex-nowrap gap-5 lg:gap-12 pb-6 snap-x snap-mandatory scrollbar-track-sky-100">
 
                             @foreach($layanans as $layanan)
 
-                                <div
-                                    class="relative w-72 lg:w-80 h-80 lg:h-90 mb-15 lg:mb-0 rounded-2xl overflow-hidden shrink-0 snap-start group/card border border-white/0 bg-[#2f2118] p-6 text-white backdrop-blur-sm hover:border-amber-400/40 transition-colors hover:drop-shadow-[0_0_8px_rgba(251,191,36,0.3)]">
+                                <div class="relative w-72 lg:w-80 h-80 lg:h-90 mb-15 lg:mb-0 rounded-2xl overflow-hidden shrink-0 snap-start group/card border border-white/0 bg-[#2f2118] p-6 text-white backdrop-blur-sm hover:border-amber-400/40 transition-colors hover:drop-shadow-[0_0_8px_rgba(251,191,36,0.3)]">
 
                                     <img class="object-cover w-full h-full absolute inset-0 group-hover/card:scale-125 opacity-0 group-hover/card:opacity-100 transition-all duration-600 entered litespeed-loaded"
                                         alt="gambar1" src="{{ asset('images/' . $layanan->image) }}">
 
-                                    <div
-                                        class="absolute inset-0 bg-black/30 opacity-0 group-hover/card:opacity-100 after:absolute after:inset-0 after:bg-linear-to-t after:from-black/80">
-                                    </div>
+                                    <div class="absolute inset-0 bg-black/30 opacity-0 group-hover/card:opacity-100 after:absolute after:inset-0 after:bg-linear-to-t after:from-black/80"></div>
 
                                     <div class="absolute left-0 w-full h-full flex flex-col justify-end top-0 ">
 
