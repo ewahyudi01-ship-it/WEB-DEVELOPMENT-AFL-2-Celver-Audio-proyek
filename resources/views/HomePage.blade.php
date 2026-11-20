@@ -64,8 +64,7 @@
                 <!-- Container layanan -->
                 <div class="relative z-10 grid grid-cols-1 lg:grid-cols-[2fr_2fr] lg:gap-12 items-center h-full w-full ">
 
-                    <div
-                        class="flex w-fulf top-0 l h-full justify-center lg:justify-start items-end lg:items-center overflow-hidden">
+                    <div class="flex w-fulf top-0 l h-full justify-center lg:justify-start items-end lg:items-center overflow-hidden">
                         <img src="{{ asset('images/4_image.png') }}" alt="Gambar Depan"
                             class="h-full w-auto object-contain">
                     </div>

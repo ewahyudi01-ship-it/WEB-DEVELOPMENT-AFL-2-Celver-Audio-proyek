@@ -8,7 +8,6 @@
         @include('shared.navbar')
     </div>
 
-    <!-- Warm ambient lighting -->
     <div class="absolute top-0 left-0 w-80 h-80 bg-amber-500/10 blur-[120px] rounded-full pointer-events-none"></div>
     <div class="absolute bottom-0 right-0 w-96 h-80 bg-yellow-700/10 blur-[140px] rounded-full pointer-events-none"></div>
 
@@ -23,8 +22,10 @@
 
     </div>
 
-    <!-- Main -->
-    <div class="relative flex-1 z-10 max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center px-6 py-20 lg:px-24 lg:py-28">
+
+    <div class="relative flex-1 md:mb-40 z-10 max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center px-6 py-20 lg:px-24 lg:py-28">
+
+    <div class="absolute top-0 -right-20 w-36 h-36 lg:w-96 lg:h-96 bg-amber-500/10 rounded-full blur-3xl pointer-events-none"></div>
 
         <div class="flex flex-col gap-10">
             <div class="space-y-5">
@@ -85,12 +86,9 @@
                     </p>
                 </div>
 
-                <form action="{{ route('submit-message') }}" method="POST" class="flex flex-col gap-6">
+                <form action="{{ route('submit-message') }}" method="POST" class="flex flex-col gap-6 hover:drop-shadow-[0_0_6px_rgba(251,191,36,0.3)]">
                     @csrf
                     <div class="space-y-3">
-                        <label class="text-gray-400 font-bold text-xs tracking-wider">
-                            YOUR MESSAGE
-                        </label>
 
                         <input type="text" name="description" value="{{ old('description') }}" placeholder="Type here..."
                         class="w-full h-40 p-4 text-amber-400/90 border rounded-lg border-t border-amber-500/30 focus:outline-none" required>
@@ -109,9 +107,12 @@
                     </button>
                 </form>
             </div>
-        </div>
+        </div>  
     </div>
+    <img src="{{ asset('images/bottomRetroArt.png') }}"
+                    class="absolute bottom-0 w-full h-auto block object-contain z-40 pointer-events-none drop-shadow-[0_0_12px_rgba(251,191,36,0.3)]">
 </div>
+ 
 </section>
 
 @endsection
