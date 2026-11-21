@@ -19,16 +19,8 @@ class DashboardController extends Controller
 
     public function viewEditContent()
     {
-
         return view('editPageDashboard');
     }
-
-    public function viewEditBanner()
-    {
-
-        return view('editPageBannerDashboard');
-    }
-
 
 
     public function destroy(\Illuminate\Http\Request $request)

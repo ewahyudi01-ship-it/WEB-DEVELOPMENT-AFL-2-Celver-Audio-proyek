@@ -8,7 +8,7 @@
 
             <header class="relative w-full h-full md:h-auto overflow-hidden z-30 justify-center">
 
-            <div class="absolute top-0 right-0 w-full h-full overflow-hidden pointer-events-none z-10">
+            <div class="hidden lg:block absolute top-0 right-0 w-full h-full overflow-hidden pointer-events-none z-10">
                     <div id="intro-stars" class="absolute top-5 left-[37%] w-0.5 h-0.5 rounded-4xl bg-amber-200/40 animate-pulse"></div>
                     <div id="intro-stars" class="absolute top-5 left-[37%] w-1 h-1 rounded-4xl bg-amber-100 blur-xs animate-pulse"></div>
                     <div id="intro-stars" class="absolute top-10 left-[20%] w-0.5 h-0.5 rounded-4xl bg-amber-200/40 animate-pulse"></div>

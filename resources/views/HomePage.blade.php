@@ -39,7 +39,7 @@
         <section id='serviceSection' class="relative w-full h-auto">
 
             <!-- Container Efek Sinar -->
-            <div class="absolute top-0 right-0 w-full h-full overflow-hidden pointer-events-none z-50">
+            <div class="hidden lg:block absolute top-0 right-0 w-full h-full overflow-hidden pointer-events-none z-50">
 
                 <div class="absolute -top-10 left-[15%] w-12 h-[800px] bg-gradient-to-b from-amber-300/15 via-amber-500/5 to-transparent rotate-[-40] blur-xl animate-pulse"></div>
                 <div class="absolute -top-10 left-[20%] w-12 h-[550px] bg-gradient-to-b from-amber-200/50 via-amber-500/15 to-transparent -rotate-[-20deg] blur-lg [animation:pulse_4s_cubic-bezier(0.4,0,0.6,1)_infinite]"></div>

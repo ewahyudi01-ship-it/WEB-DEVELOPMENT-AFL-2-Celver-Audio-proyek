@@ -26,35 +26,31 @@
                 ☰
             </summary>
 
-            <div class="absolute right-0 top-full mt-4 w-48
-                        rounded-xl border border-white/10
-                        bg-[#17120f] shadow-xl p-5">
+            <div class="absolute right-0 top-full mt-4 w-48 rounded-xl border border-white/10 bg-[#e1e0df] shadow-xl p-5">
 
                 <div class="flex flex-col gap-5 text-sm">
                     <a href="{{ route('home-route') }}#serviceSection"
-                       class="hover:text-yellow-500">
+                       class="text-black hover:text-yellow-500">
                         Service
                     </a>
 
                     <a href="{{ route('home-route') }}#achivementSection"
-                       class="hover:text-yellow-500">
+                       class="text-black hover:text-yellow-500">
                         Achievements
                     </a>
 
                     <a href="/explore"
-                       class="hover:text-yellow-500">
+                       class="text-black hover:text-yellow-500">
                         About
                     </a>
 
                     <a href="{{ route('contact-route') }}#contactSection"
-                       class="hover:text-yellow-500">
+                       class="text-black hover:text-yellow-500">
                         Contact
                     </a>
                 </div>
             </div>
         </details>
-
-
         </div>
     </div>
 </nav>

@@ -72,9 +72,11 @@
                                 <p class="text-xs text-neutral-400 mt-0.5">Tambah, edit, atau hapus jenis jasa sound system yang ditawarkan.</p>
                             </div>
                         </div>
-                        <button type="button" class="px-4 py-2 rounded-lg bg-neutral-800 hover:bg-amber-500 text-neutral-200 hover:text-neutral-950 text-xs font-semibold transition cursor-pointer shrink-0">
-                            Kelola Layanan
-                        </button>
+                        <a href="{{ route('list-layanan-route') }}" class="inline-flex items-center justify-center px-5 py-2.5 rounded-xl bg-neutral-900 hover:bg-neutral-800 text-neutral-200 border border-neutral-700 text-sm font-medium transition shrink-0">
+                            <button type="button" class="px-4 py-2 rounded-lg bg-neutral-800 hover:bg-amber-500 text-neutral-200 hover:text-neutral-950 text-xs font-semibold transition cursor-pointer shrink-0">
+                            Edit services
+                            </button>
+                        </a>
                     </div>
 
                     {{-- 2. Achievements --}}
@@ -88,9 +90,11 @@
                                 <p class="text-xs text-neutral-400 mt-0.5">Ubah teks pengalaman kerja, klien utama, dan jaminan kualitas.</p>
                             </div>
                         </div>
-                        <button type="button" class="px-4 py-2 rounded-lg bg-neutral-800 hover:bg-amber-500 text-neutral-200 hover:text-neutral-950 text-xs font-semibold transition cursor-pointer shrink-0">
-                            Edit Achievements
-                        </button>
+                        <a href="{{ route('list-layanan-route') }}" class="inline-flex items-center justify-center px-5 py-2.5 rounded-xl bg-neutral-900 hover:bg-neutral-800 text-neutral-200 border border-neutral-700 text-sm font-medium transition shrink-0">
+                            <button type="button" class="px-4 py-2 rounded-lg bg-neutral-800 hover:bg-amber-500 text-neutral-200 hover:text-neutral-950 text-xs font-semibold transition cursor-pointer shrink-0">
+                            Edit achivements
+                            </button>
+                        </a>
                     </div>
 
                     {{-- 3. About Us --}}

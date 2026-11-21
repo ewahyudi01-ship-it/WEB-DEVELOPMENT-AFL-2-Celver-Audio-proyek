@@ -37,7 +37,7 @@
                     <span class="text-white group-hover:text-amber-400 text-xl group-hover:translate-x-1 transition z-10">Edit Contents</span>
                 </a>
 
-                <a href="{{ route('editBanner-route') }}"
+                <a href="{{ route('edit-Banner-route') }}"
                     class="col-span-2 row-span-2 relative overflow-hidden bg-gradient-to-br from-amber-900/15 via-neutral-900/80 to-neutral-950/90 border border-amber-500/20 hover:border-amber-400/70 bg-amber-800/20 hover:bg-amber-700/60 rounded-bl-[65px] transition duration-300 p-6 flex flex-col justify-end group">
 
                      <img src="{{ asset('images/bannerEditLogo.png') }}" alt="Edit Banners"

@@ -5,25 +5,23 @@
     <div class="absolute inset-0">
         @include('shared.navbar')
     </div>
-
-    
-    <section class="relative w-full min-h-screen h-auto lg:h-screen overflow-hidden flex flex-col pt-30 lg:flex-row lg:pt-0 items-center lg:pl-50"> 
-
-    <div class="bg-parallax absolute inset-0 w-full h-full bg-cover bg-center z-0"
+        <div class="bg-parallax absolute inset-0 w-full h-full bg-cover bg-center z-0"
             style="background-image: url('{{ asset('images/notification-bg.jpeg') }}'); background-size: cover; background-position: center; background-repeat: no-repeat;">
         </div>
+    
+    <section class="relative w-full min-h-screen h-auto lg:h-screen overflow-hidden flex flex-col pt-30 lg:flex-row lg:pt-0 items-center "> 
         
-        <div class="mb-10">
+        <div class="relative w-max h-full flex flex-col justify-center bg-black/50 lg:px-20">
             <p class="text-amber-500 text-xs tracking-[5px] font-semibold">ADMIN PANEL</p>
             <h1 class="text-3xl md:text-4xl text-white mt-3">Messages</h1>
             <p class="text-gray-500 text-sm mt-2">Manage your received messages.</p>
         </div>
 
-        <div class="relative flex w-full h-full bg-amber-500/10 items-center">
+        <div class="relative flex w-full h-full items-center">
 
-        <div class="absolute flex w-10 h-full bg-linear-to-r from-[rgb(11,11,11)] to-transparent z-30"></div>
+        <div class="absolute flex w-10 h-full bg-linear-to-r from-[rgb(14,14,14)] to-transparent z-30"></div>
 
-            <div class="w-full min-w-0 h-auto lg:mr-100 overflow-x-auto flex flex-col lg:flex-row lg:flex-nowrap gap-5 lg:gap-12 pb-6 lg:snap-x lg:snap-mandatory scrollbar-track-sky-100">
+            <div class="w-full min-w-0 h-auto lg:mr-140 overflow-x-auto flex flex-col lg:flex-row lg:flex-nowrap gap-5 lg:gap-6 pb-6 lg:snap-x lg:snap-mandatory scrollbar-track-amber-400/30">
             
                     @forelse ($messages as $message)
 
