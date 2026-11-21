@@ -34,12 +34,6 @@
                     How can we <br>
                     <span class="text-amber-400">help?</span>
                 </h1>
-
-                <p class="text-gray-400 text-sm md:text-base leading-relaxed max-w-md">
-                    Have something in mind? Feel free to reach
-                    out to us. We would love to hear from you
-                    and help with your needs.
-                </p>
             </div>
 
             <div class="border-l border-amber-500/40 pl-6
@@ -81,9 +75,9 @@
 
                     <h2 class="text-2xl md:text-3xl text-white font-medium">Let's talk.</h2>
 
-                    <p class="text-gray-500 text-sm">
-                        Tell us what is on your mind.
-                    </p>
+                   <p class="text-gray-400 text-sm md:text-base leading-relaxed max-w-md">
+                    Have something in mind? Feel free to reach out to us. We would love to hear from you and help with your needs.
+                   </p>
                 </div>
 
                 <form action="{{ route('submit-message') }}" method="POST" class="flex flex-col gap-6 hover:drop-shadow-[0_0_6px_rgba(251,191,36,0.3)]">
