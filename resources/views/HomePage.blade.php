@@ -171,13 +171,29 @@
         </section>
     </main>
 
-     <!-- Masih nunggu client -->
-    <footer class="relative w-full h-screen text-neutral-300 pt-16 pb-8 font-sans overflow-hidden border-t border-amber-900/30">
-    
-    <div class="absolute inset-0 z-0 pointer-events-none">
-        <img src="{{ asset('images/footerBg.jpeg') }}" alt="Footer Background" class="w-full h-full object-cover">
-        <div class="absolute inset-0 bg-neutral-950/90 backdrop-blur-sm"></div>
-    </div>
+
+
+    <footer
+        class="relative w-full h-screen text-neutral-300 pt-16 pb-8 font-sans overflow-hidden border-t border-amber-900/30">
+
+
+        <div class="relative w-full h-[20vh] lg:h-[34vh] z-20">
+            <img src="{{ asset('images/5_image.jpeg') }}" class="w-full h-full object-cover pointer-events-none"
+                alt="pemandangan">
+
+            <div class="absolute inset-0 flex items-center justify-center bg-black/40">
+                <a href="{{ route('about-route') }}#serviceSection"
+                    class="font-[Outfit] text-shadow-lg hover:text-yellow-500 transition-all duration-200 ease-out">
+                    <h3 class="text-white text-2xl lg:text-6xl hover:text-yellow-500 transition-all duration-200 ease-out">
+                        MORE ABOUT US?</h3>
+                </a>
+            </div>
+        </div>
+
+        <div class="absolute inset-0 z-0 pointer-events-none">
+            <img src="{{ asset('images/footerBg.jpeg') }}" alt="Footer Background" class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-neutral-950/90 backdrop-blur-sm"></div>
+        </div>
 
         <div class="relative z-10 container mx-auto px-6 lg:px-12 max-w-7xl">
 
