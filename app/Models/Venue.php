@@ -4,9 +4,11 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Abouts extends Model
+class Venue extends Model
 {
     protected $fillable = [
-        'aboutUsDesc'
+        'titlePlace',
+        'descriptionPlace',
+        'image'
     ];
 }

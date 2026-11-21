@@ -4,9 +4,9 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Tagline extends Model
+class InteriorBanner extends Model
 {
     protected $fillable = [
-        'text'
+        'image'
     ];
 }
