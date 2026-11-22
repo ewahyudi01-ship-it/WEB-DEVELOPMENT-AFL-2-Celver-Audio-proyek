@@ -52,7 +52,7 @@
 
                     @empty
                     <div class="relative flex w-full h-auto items-center justify-center">
-                        <p class="text-sm lg:text-3xl font-bold tracking-widest text-amber-500/30">Empty. it's quiet today :/</p>
+                        <p class="text-sm lg:text-3xl font-bold tracking-widest text-amber-500/30">Inbox empty, no messages :/</p>
                     </div>
 
                     @endforelse

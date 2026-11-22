@@ -84,8 +84,8 @@
                     @csrf
                     <div class="space-y-3">
 
-                        <input type="text" name="description" value="{{ old('description') }}" placeholder="Type here..."
-                        class="w-full h-40 p-4 text-amber-400/90 border rounded-lg border-t border-amber-500/30 focus:outline-none" required>
+                        <textarea name="description" placeholder="Type here..."
+                        class="w-full h-40 p-4 text-amber-400/90 border rounded-lg border-t border-amber-500/30 focus:outline-none" required>{{ old('description') }}</textarea>
                         @error('description')
                             <p class="error">{{ $message }}</p>
                         @enderror

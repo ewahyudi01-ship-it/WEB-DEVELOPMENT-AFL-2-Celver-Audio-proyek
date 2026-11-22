@@ -9,6 +9,7 @@ use App\Http\Controllers\ContactController;
 use App\Http\Controllers\MessageController;
 use App\Http\Controllers\LayananController;
 use App\Http\Controllers\BannerController;
+use App\Http\Controllers\AchivementController;
 
 
 
@@ -26,7 +27,12 @@ Route::post('/dashboard/view/Notification/delete-form/{message}', [MessageContro
 
 // user admin (CRUD-data mostly)
 //formAchivement
-Route::get('/dashboard/view/list-layanan/', [LayananController::class, 'view'])->name('list-layanan-route');
+Route::get('/dashboard/view/list-achivement/', [AchivementController::class, 'view'])->name('list-achivement-route');
+Route::get('/dashboard/new/achivement/', [AchivementController::class, 'create'])->name('new-achivement-route');
+Route::post('/save-achivement', [AchivementController::class, 'store'])->name('save-achivement');
+Route::post('/delete-achivement', [AchivementController::class, 'destroy'])->name('delete-achivement');
+Route::get('/edit-achivement/{achivement}', [AchivementController::class, 'edit'])->name('edit-achivement');
+Route::post('/update-achivement/{achivement}', [AchivementController::class, 'update'])->name('update-achivement');
 
 
 //formBanner
