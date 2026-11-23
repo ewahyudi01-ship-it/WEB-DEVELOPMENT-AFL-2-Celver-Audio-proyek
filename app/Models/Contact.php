@@ -11,4 +11,5 @@ class Contact extends Model
         'gmail',
         'lokasi',
     ];
+
 }

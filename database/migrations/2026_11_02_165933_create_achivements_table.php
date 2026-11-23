@@ -13,9 +13,9 @@ return new class extends Migration
     {
         Schema::create('achivements', function (Blueprint $table) {
             $table->id();
-            $table->text('yearsDesc');
-            $table->text('trustedDesc');
-            $table->text('expertiseDesc');
+            $table->text('titleDesc');
+            $table->text('subTitleDesc')->nullable();
+            $table->text('desc');
             $table->timestamps();
         });
     }
