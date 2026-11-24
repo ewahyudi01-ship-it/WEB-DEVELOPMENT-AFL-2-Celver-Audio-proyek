@@ -42,21 +42,21 @@
                 <div class="space-y-2">
                     <p class="text-amber-500/70 text-xs tracking-[3px]">EMAIL</p>
                     <p class="text-gray-200 text-sm md:text-base">
-                        {{ $contacts->gmail }}
+                        {{ $contact->gmail }}
                     </p>
                 </div>
 
                 <div class="space-y-2">
                     <p class="text-amber-500/70 text-xs tracking-[3px]">LOCATION</p>
                     <p class="text-gray-200 text-sm md:text-base">
-                        {{ $contacts->lokasi }}
+                        {{ $contact->lokasi }}
                     </p>
                 </div>
 
                 <div class="space-y-2">
                     <p class="text-amber-500/70 text-xs tracking-[3px]">PHONE</p>
                     <p class="text-gray-200 text-sm md:text-base">
-                        {{ $contacts->whatsapp }}
+                        {{ $contact->whatsapp }}
                     </p>
                 </div>
 

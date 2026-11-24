@@ -15,8 +15,8 @@ use App\Http\Controllers\AchivementController;
 
 // user biasa
 Route::get('/', [HomepageController::class, 'view'])->name('home-route');
-Route::get('/explore', [ExploreController::class, 'view'])->name('about-route');
-Route::get('/contact', [ContactController::class, 'view'])->name('contact-route');
+Route::get('/explore', [ExploreController::class, 'viewVenue'])->name('about-route');
+Route::get('/contact', [ContactController::class, 'viewUser'])->name('contact-route');
 Route::post('/contact', [MessageController::class, 'store'])->name('submit-message');
 
 // user admin saja (view dashboard)
@@ -39,9 +39,22 @@ Route::post('/update-achivement/{achivement}', [AchivementController::class, 'up
 Route::get('/dashboard/edit/Bannerpage', [BannerController::class, 'view'])->name('edit-Banner-route');
 
 //formContact
+Route::get('/dashboard/view/list-contact/', [ContactController::class, 'view'])->name('list-contact-route');
+Route::get('/edit-contact/{contact}', [ContactController::class, 'edit'])->name('edit-contact');
+Route::post('/update-contact/{contact}', [ContactController::class, 'update'])->name('update-contact');
+
+
 
 //formLayanan
 Route::get('/dashboard/view/list-layanan/', [LayananController::class, 'view'])->name('list-layanan-route');
+
+//formPortfolio
+Route::get('/dashboard/view/list-portfolio/', [ExploreController::class, 'view'])->name('list-portfolio-route');
+Route::get('/dashboard/new/portfolio/', [ExploreController::class, 'create'])->name('new-portfolio-route');
+Route::post('/save-portfolio', [ExploreController::class, 'store'])->name('save-portfolio');
+Route::post('/delete-portfolio', [ExploreController::class, 'destroy'])->name('delete-portfolio');
+Route::get('/edit-portfolio/{portfolio}', [ExploreController::class, 'edit'])->name('edit-portfolio');
+Route::post('/update-portfolio/{portfolio}', [ExploreController::class, 'update'])->name('update-portfolio');
 
 
 //formTesting (crud latihan di kelas)

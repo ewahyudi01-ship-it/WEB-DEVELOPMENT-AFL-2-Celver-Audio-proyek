@@ -21,19 +21,19 @@
 
         <div class="absolute flex w-10 h-full bg-linear-to-r from-[rgb(14,14,14)] to-transparent z-30"></div>
 
-            <div class="w-full min-w-0 h-auto lg:mr-140 overflow-x-auto flex flex-col lg:flex-row lg:flex-nowrap gap-5 lg:gap-6 pb-6 lg:snap-x lg:snap-mandatory scrollbar-track-amber-400/30">
+            <div class="h-full min-h-0 h-auto lg:mr-140 overflow-y-auto flex flex-col gap-5 lg:gap-6 pb-6 lg:pb-0 lg:px-15 lg:snap-x lg:snap-mandatory scrollbar-track-amber-400/10">
             
                     @forelse ($messages as $message)
 
-                        <div class="relative w-full lg:w-80 h-80 lg:h-90 lg:mb-0 shrink-0 rounded-2xl overflow-hidden snap-start  group/card text-center text-[8px] lg:text-sm py-3 lg:py-2 mt-2 text-amber-100 drop-shadow-[0_0_3px_rgba(207,118,0,1)] bg-white/1 backdrop-blur-md border transition duration-300 border-white/1 rounded-2xl shadow-[inset_0_0_15px_rgba(245,158,11,0.2)] hover:shadow-[inset_0_0_25px_rgba(255,128,0,0.45),0_0_25px_rgba(255,128,0,0.3)]">
+                        <div class="relative w-auto lg:w-fit h-80 lg:h-auto lg:mb-0 shrink-0 rounded-xl overflow-hidden snap-start group/card text-center text-[8px] lg:text-sm py-3 lg:py-2 mt-2 text-amber-100 drop-shadow-[0_0_3px_rgba(207,118,0,1)] bg-white/1 backdrop-blur-md border transition duration-300 border-white/1 rounded-2xl shadow-[inset_0_0_15px_rgba(245,158,11,0.2)] hover:shadow-[inset_0_0_25px_rgba(255,128,0,0.45),0_0_25px_rgba(255,128,0,0.3)]">
 
                             <div class="w-full my-auto h-full overflow-y-auto pr-1 flex flex-col gap-1 relative z-10">
 
-                                <div class="p-4 md:p-8 flex flex-col gap-1 relative z-10">
-                                    <p class="whitespace-normal break-words text-sm text-amber-100 [text-shadow:0_0_10px_rgba(251,191,36,0.75)]">{{ $message->description }}</p>
+                                <div class="p-4 md:p-8 flex flex-col gap-1 relative z-10 items-start">
+                                    <p class="whitespace-normal break-words text-sm text-amber-100 [text-shadow:0_0_10px_rgba(251,191,36,0.75)] text-start">{{ $message->description }}</p>
                                 
                                     <form action="{{ route('delete-message', $message) }}" method="POST" onsubmit="return confirm('Are you sure want to delete it?')"
-                                        class="relative z-10 pt-3 items">
+                                        class="relative z-10 pt-3">
                                         @csrf
                                         <button type="submit" 
                                                 class="inline-flex items-center justify-center gap-1.5 px-4 py-1.5 rounded-lg text-xs font-semibold tracking-wider uppercase bg-red-500/10 hover:bg-red-600 text-red-400 hover:text-white border border-red-500/30 hover:border-red-500 shadow-[0_0_15px_rgba(239,68,68,0)] hover:shadow-[0_0_15px_rgba(239,68,68,0.45)] transition-all duration-300 cursor-pointer group/btn">

@@ -43,7 +43,7 @@
             {{-- ========================================================= --}}
             {{-- BAGIAN 3: DAFTAR KONTEN WEBSITE (CRUD)                    --}}
             {{-- ========================================================= --}}
-            <div class="rounded-2xl bg-neutral-900/80 backdrop-blur-md border border-amber-500/25 p-6 lg:p-8 shadow-xl">
+            <div class="rounded-2xl bg-neutral-900/60 backdrop-blur-md border border-amber-500/25 p-6 lg:p-8 shadow-xl">
                 <div class="mb-6">
                     <span class="text-xs font-medium text-amber-400">Contents • editing</span>
                     <h2 class="text-xl font-bold text-white mt-0.5">Kelola Konten Halaman</h2>
@@ -66,7 +66,7 @@
                         </div>
                         <a href="{{ route('list-layanan-route') }}">
                             <button type="button" class="px-4 py-2 rounded-lg bg-neutral-800 hover:bg-amber-500 text-neutral-200 hover:text-neutral-950 text-xs font-semibold transition cursor-pointer shrink-0">
-                            Edit services
+                            Edit Services
                             </button>
                         </a>
                     </div>
@@ -84,7 +84,7 @@
                         </div>
                         <a href="{{ route('list-achivement-route') }}">
                             <button type="button" class="px-4 py-2 rounded-lg bg-neutral-800 hover:bg-amber-500 text-neutral-200 hover:text-neutral-950 text-xs font-semibold transition cursor-pointer shrink-0">
-                            Edit achivements
+                            Edit Achivements
                             </button>
                         </a>
                     </div>
@@ -100,9 +100,29 @@
                                 <p class="text-xs text-neutral-400 mt-0.5">Update the Celver Audio profile description at the bottom of the website.</p>
                             </div>
                         </div>
-                        <button type="button" class="px-4 py-2 rounded-lg bg-neutral-800 hover:bg-amber-500 text-neutral-200 hover:text-neutral-950 text-xs font-semibold transition cursor-pointer shrink-0">
+                        <a href="{{ route('list-contact-route') }}">
+                            <button type="button" class="px-4 py-2 rounded-lg bg-neutral-800 hover:bg-amber-500 text-neutral-200 hover:text-neutral-950 text-xs font-semibold transition cursor-pointer shrink-0">
                             Edit Contacts
-                        </button>
+                            </button>
+                        </a>
+                    </div>
+
+                    {{-- 4. protofolio --}}
+                    <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 p-4 rounded-xl bg-neutral-950/70 border border-neutral-800 hover:border-amber-400/40 transition">
+                        <div class="flex items-start sm:items-center gap-4">
+                            <div class="w-10 h-10 rounded-lg bg-amber-500/15 text-amber-400 flex items-center justify-center font-bold shrink-0">
+                                4
+                            </div>
+                            <div>
+                                <h3 class="text-base font-semibold text-white">Our Portfolio</h3>
+                                <p class="text-xs text-neutral-400 mt-0.5">List of all portfolio for determine work experiences</p>
+                            </div>
+                        </div>
+                        <a href="{{ route('list-portfolio-route') }}">
+                            <button type="button" class="px-4 py-2 rounded-lg bg-neutral-800 hover:bg-amber-500 text-neutral-200 hover:text-neutral-950 text-xs font-semibold transition cursor-pointer shrink-0">
+                            Edit Portfolio
+                            </button>
+                        </a>
                     </div>
 
                 </div>
