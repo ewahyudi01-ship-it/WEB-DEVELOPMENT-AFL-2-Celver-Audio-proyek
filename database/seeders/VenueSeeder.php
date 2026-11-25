@@ -21,13 +21,13 @@ class VenueSeeder extends Seeder
 
         Venue::create([
             'titlePlace' => 'BAR',
-            'descriptionPlace' => '',
+            'descriptionPlace' => 'Dynamic, club-grade audio setups tailored for vibrant social spaces. ',
             'image' => '6_image.jpeg',
         ]);
 
         Venue::create([
             'titlePlace' => 'RESTAURANT',
-            'descriptionPlace' => '',
+            'descriptionPlace' => 'Seamless background audio for comfortable, intimate dining experiences. ',
             'image' => '7_image.jpeg',
         ]);
     }

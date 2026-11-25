@@ -9,13 +9,14 @@ use App\Http\Controllers\ContactController;
 use App\Http\Controllers\MessageController;
 use App\Http\Controllers\LayananController;
 use App\Http\Controllers\BannerController;
+use App\Http\Controllers\AchivementController;
 
 
 
 // user biasa
 Route::get('/', [HomepageController::class, 'view'])->name('home-route');
-Route::get('/explore', [ExploreController::class, 'view'])->name('about-route');
-Route::get('/contact', [ContactController::class, 'view'])->name('contact-route');
+Route::get('/explore', [ExploreController::class, 'viewVenue'])->name('about-route');
+Route::get('/contact', [ContactController::class, 'viewUser'])->name('contact-route');
 Route::post('/contact', [MessageController::class, 'store'])->name('submit-message');
 
 // user admin saja (view dashboard)
@@ -26,22 +27,35 @@ Route::post('/dashboard/view/Notification/delete-form/{message}', [MessageContro
 
 // user admin (CRUD-data mostly)
 //formAchivement
-Route::get('/dashboard/view/list-layanan/', [LayananController::class, 'view'])->name('list-layanan-route');
+Route::get('/dashboard/view/list-achivement/', [AchivementController::class, 'view'])->name('list-achivement-route');
+Route::get('/dashboard/new/achivement/', [AchivementController::class, 'create'])->name('new-achivement-route');
+Route::post('/save-achivement', [AchivementController::class, 'store'])->name('save-achivement');
+Route::post('/delete-achivement', [AchivementController::class, 'destroy'])->name('delete-achivement');
+Route::get('/edit-achivement/{achivement}', [AchivementController::class, 'edit'])->name('edit-achivement');
+Route::post('/update-achivement/{achivement}', [AchivementController::class, 'update'])->name('update-achivement');
 
 
 //formBanner
 Route::get('/dashboard/edit/Bannerpage', [BannerController::class, 'view'])->name('edit-Banner-route');
 
 //formContact
+Route::get('/dashboard/view/list-contact/', [ContactController::class, 'view'])->name('list-contact-route');
+Route::get('/edit-contact/{contact}', [ContactController::class, 'edit'])->name('edit-contact');
+Route::post('/update-contact/{contact}', [ContactController::class, 'update'])->name('update-contact');
+
+
 
 //formLayanan
-// Route::get('/dashboard/view/list-layanan/', [LayananController::class, 'view'])->name('list-layanan-route');
-Route::get('/dashboard/view/list-layanan', [LayananController::class, 'view'])->name('list-layanan');
-Route::get('/dashboard/view/create-layanan', [LayananController::class, 'create'])->name('create-layanan');
-Route::post('/dashboard/view/store-layanan', [LayananController::class, 'store'])->name('store-layanan');
-Route::get('/dashboard/view/edit-layanan/{layanan}', [LayananController::class, 'edit'])->name('edit-layanan');
-Route::post('/dashboard/view/update-layanan/{layanan}', [LayananController::class, 'update'])->name('update-layanan');
-Route::post('/dashboard/view/delete-layanan/{layanan}', [LayananController::class, 'destroy'])->name('delete-layanan');
+Route::get('/dashboard/view/list-layanan/', [LayananController::class, 'view'])->name('list-layanan-route');
+
+//formPortfolio
+Route::get('/dashboard/view/list-portfolio/', [ExploreController::class, 'view'])->name('list-portfolio-route');
+Route::get('/dashboard/new/portfolio/', [ExploreController::class, 'create'])->name('new-portfolio-route');
+Route::post('/save-portfolio', [ExploreController::class, 'store'])->name('save-portfolio');
+Route::post('/delete-portfolio', [ExploreController::class, 'destroy'])->name('delete-portfolio');
+Route::get('/edit-portfolio/{portfolio}', [ExploreController::class, 'edit'])->name('edit-portfolio');
+Route::post('/update-portfolio/{portfolio}', [ExploreController::class, 'update'])->name('update-portfolio');
+
 
 //formTesting (crud latihan di kelas)
 Route::get('/testing', [TestingController::class, 'index']);

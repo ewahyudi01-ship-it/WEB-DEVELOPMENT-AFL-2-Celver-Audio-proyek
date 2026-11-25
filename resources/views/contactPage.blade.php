@@ -42,21 +42,21 @@
                 <div class="space-y-2">
                     <p class="text-amber-500/70 text-xs tracking-[3px]">EMAIL</p>
                     <p class="text-gray-200 text-sm md:text-base">
-                        {{ $contacts->gmail }}
+                        {{ $contact->gmail }}
                     </p>
                 </div>
 
                 <div class="space-y-2">
                     <p class="text-amber-500/70 text-xs tracking-[3px]">LOCATION</p>
                     <p class="text-gray-200 text-sm md:text-base">
-                        {{ $contacts->lokasi }}
+                        {{ $contact->lokasi }}
                     </p>
                 </div>
 
                 <div class="space-y-2">
                     <p class="text-amber-500/70 text-xs tracking-[3px]">PHONE</p>
                     <p class="text-gray-200 text-sm md:text-base">
-                        {{ $contacts->whatsapp }}
+                        {{ $contact->whatsapp }}
                     </p>
                 </div>
 
@@ -84,8 +84,8 @@
                     @csrf
                     <div class="space-y-3">
 
-                        <input type="text" name="description" value="{{ old('description') }}" placeholder="Type here..."
-                        class="w-full h-40 p-4 text-amber-400/90 border rounded-lg border-t border-amber-500/30 focus:outline-none" required>
+                        <textarea name="description" placeholder="Type here..."
+                        class="w-full h-40 p-4 text-amber-400/90 border rounded-lg border-t border-amber-500/30 focus:outline-none" required>{{ old('description') }}</textarea>
                         @error('description')
                             <p class="error">{{ $message }}</p>
                         @enderror
