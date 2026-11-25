@@ -47,6 +47,11 @@ Route::post('/update-contact/{contact}', [ContactController::class, 'update'])->
 
 //formLayanan
 Route::get('/dashboard/view/list-layanan/', [LayananController::class, 'view'])->name('list-layanan-route');
+Route::get('/dashboard/new/layanan/', [LayananController::class, 'create'])->name('new-layanan-route');
+Route::post('/save-layanan', [LayananController::class, 'store'])->name('save-layanan');
+Route::post('/delete-layanan', [LayananController::class, 'destroy'])->name('delete-layanan');
+Route::get('/edit-layanan/{layanan}', [LayananController::class, 'edit'])->name('edit-layanan');
+Route::post('/update-layanan/{layanan}', [LayananController::class, 'update'])->name('update-layanan');
 
 //formPortfolio
 Route::get('/dashboard/view/list-portfolio/', [ExploreController::class, 'view'])->name('list-portfolio-route');
