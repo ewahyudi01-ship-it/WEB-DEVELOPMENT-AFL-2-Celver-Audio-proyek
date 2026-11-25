@@ -36,7 +36,7 @@
 
     <main>
 
-        <section id='serviceSection' class="relative w-full h-auto">
+        <section id='serviceSection' class="relative w-full h-auto overflow-hidden">
 
             <!-- Container Efek Sinar -->
             <div class="hidden lg:block absolute top-0 right-0 w-full h-full overflow-hidden pointer-events-none z-50">
@@ -173,11 +173,10 @@
 
 
 
-    <footer
-        class="relative w-full h-screen text-neutral-300 pt-16 pb-8 font-sans overflow-hidden border-t border-amber-900/30">
+    <footer class="relative w-full h-screen text-neutral-300 pt-16 pb-8 font-sans overflow-hidden border-t border-amber-900/30">
 
 
-        <div class="relative w-full h-[20vh] lg:h-[34vh] z-20">
+        <div class="relative w-full h-[20vh] lg:h-[34vh] z-20 mb-10">
             <img src="{{ asset('images/5_image.jpeg') }}" class="w-full h-full object-cover pointer-events-none"
                 alt="pemandangan">
 
@@ -195,7 +194,7 @@
             <div class="absolute inset-0 bg-neutral-950/90 backdrop-blur-sm"></div>
         </div>
 
-        <div class="relative z-10 container mx-auto px-6 lg:px-12 max-w-7xl">
+        <div class="relative z-10 container mx-auto px-6 lg:px-12 max-w-7xl flex flex-col items-center">
 
             <div
                 class="flex flex-col w-full items-center text-center text-xs text-neutral-500 border-t border-neutral-800/80 pt-6">

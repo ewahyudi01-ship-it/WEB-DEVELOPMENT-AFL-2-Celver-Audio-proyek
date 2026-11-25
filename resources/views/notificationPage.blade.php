@@ -2,19 +2,25 @@
 
 @section('content')
 
+
     <div class="absolute inset-0">
         @include('shared.navbar')
+        
     </div>
         <div class="bg-parallax absolute inset-0 w-full h-full bg-cover bg-center z-0"
             style="background-image: url('{{ asset('images/notification-bg.jpeg') }}'); background-size: cover; background-position: center; background-repeat: no-repeat;">
         </div>
     
     <section class="relative w-full min-h-screen h-auto lg:h-screen overflow-hidden flex flex-col pt-30 lg:flex-row lg:pt-0 items-center "> 
-        
+                @include('shared.rayLightEffect')
+
         <div class="relative w-max h-full flex flex-col justify-center bg-black/50 lg:px-20">
             <p class="text-amber-500 text-xs tracking-[5px] font-semibold">ADMIN PANEL</p>
             <h1 class="text-3xl md:text-4xl text-white mt-3">Messages</h1>
             <p class="text-gray-500 text-sm mt-2">Manage your received messages.</p>
+            <a href="{{ route('dashboard-route') }}" class="inline-flex items-center justify-center mt-2 px-5 py-2.5 rounded-xl bg-neutral-900 hover:bg-neutral-800 text-neutral-200 border border-neutral-700 text-sm font-medium transition shrink-0">
+                &larr; Back
+            </a>
         </div>
 
         <div class="relative flex w-full h-full items-center">

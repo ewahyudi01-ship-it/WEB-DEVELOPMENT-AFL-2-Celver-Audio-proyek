@@ -18,10 +18,6 @@
 
         {{-- Container Utama: Dilebarkan ke max-w-7xl agar space kosong kiri-kanan berkurang --}}
         <div class="relative z-10 max-w-7xl mx-auto flex flex-col gap-8">
-
-            {{-- ========================================================= --}}
-            {{-- BAGIAN 1: HEADER DASHBOARD                                --}}
-            {{-- ========================================================= --}}
             <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-amber-500/20 pb-6">
                 <div>
                     <span class="text-xs font-semibold uppercase tracking-widest text-amber-400">
@@ -40,9 +36,7 @@
                 </a>
             </div>
 
-            {{-- ========================================================= --}}
-            {{-- BAGIAN 2: PENGATURAN BANNER UTAMA                         --}}
-            {{-- ========================================================= --}}
+            
             <div class="rounded-2xl bg-neutral-900/80 backdrop-blur-md border border-amber-500/25 p-6 lg:p-8 shadow-xl">
                 <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 mb-5">
                     <div>

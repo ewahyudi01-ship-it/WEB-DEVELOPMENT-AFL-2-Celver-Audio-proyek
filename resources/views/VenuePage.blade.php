@@ -34,8 +34,8 @@
                     class="block w-full h-[40vh] lg:w-full lg:h-auto object-cover pointer-events-none scenery-reveal"
                     alt="pemandangan">
 
-                    <div id="intro" class="absolute inset-0 flex w-full h-full items-center justify-center text-center px-10 lg:px-0 lg:-top-14">
-                        <h1 class="font-[Outfit] font-extralight lg:font-medium text-6xl text-white lg:tracking-widest z-0">
+                    <div id="intro" class="absolute inset-0 flex w-full h-full items-center justify-center text-center px-10 lg:px-0 lg:-top-14 z-50 lg:z-0">
+                        <h1 class="font-[Outfit] font-extralight lg:font-medium text-6xl text-white lg:tracking-widest">
                             SOUND FOR YOUR PLACES
                         </h1>
                     </div>

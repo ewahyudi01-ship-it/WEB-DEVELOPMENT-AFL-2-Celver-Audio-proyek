@@ -42,8 +42,28 @@ class ExploreController extends Controller
         $data = $request->validate([
         'titlePlace' => 'required|string|max:50|min:1',
         'descriptionPlace' => 'nullable|string|max:1200',
-        'image'  => 'nullable|string|max:2048|min:1',
+        'image'  => 'nullable|image|mimes:jpg,jpeg,png,webp|max:2048',
         ]);
+
+
+        if ($request->hasFile('image')) {
+
+            $imageName = basename(
+                $request->file('image')->getClientOriginalName()
+            );
+
+            if (file_exists(public_path('images/' . $imageName))) {
+                return back()->withErrors([
+                    'image' => 'The image file name already exists, change the file name!'
+                ]);
+            }
+
+            $request->file('image')->move(public_path('images'), $imageName);
+
+            $data['image'] = $imageName;
+        }
+
+
 
         Venue::create($data);
 
@@ -71,8 +91,29 @@ class ExploreController extends Controller
         $data = $request->validate([
         'titlePlace' => 'required|string|max:50|min:1',
         'descriptionPlace' => 'nullable|string|max:1200',
-        'image'  => 'nullable|string|max:2048|min:1',
+        'image'  => 'nullable|image|mimes:jpg,jpeg,png,webp|max:2048',
         ]);
+
+        if ($request->hasFile('image')) {
+
+        $imageName = basename(
+            $request->file('image')->getClientOriginalName()
+        );
+
+        if ($imageName !== $portfolio->image && file_exists(public_path('images/' . $imageName))) {
+            return back()->withErrors([
+                'image' => 'The image file name already exists, change the file name!'
+            ]);
+        }
+
+        $request->file('image')->move( public_path('images'), $imageName );
+        
+        $data['image'] = $imageName;
+
+        } else {
+            unset($data['image']);
+        }
+
 
         $portfolio->update($data);
 

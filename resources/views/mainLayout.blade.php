@@ -10,7 +10,7 @@
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
     <link rel="stylesheet" href="{{ asset('style.css') }}">
 </head>
-<body class="bg-[rgb(11,11,11)]">
+<body class="bg-[rgb(11,11,11)] overflow-x-hidden">
 
     @yield('content')
 
@@ -91,6 +91,18 @@
             y: 0,
             opacity: 0,
             duration: 3
+        });
+
+        gsap.from("#intro-button", {
+            y: 10,
+            opacity: 1,
+            duration: 1
+        });
+
+        gsap.from(".intro-dashboard", {
+            y: -10,
+            opacity: 1,
+            duration: 1
         });
 
     </script>

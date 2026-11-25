@@ -6,22 +6,19 @@
     <div class="relative z-40">
         @include('shared.navbar')
     </div>
+    <div class="absolute inset-0 w-full h-full bg-black/10 blur-lg lg:blur rounded-xl z-10"></div>
 
     {{-- pt-28 memberi jarak dari atas agar judul tidak tertutup navbar --}}
     <section class="relative min-h-screen w-full pt-28 pb-20 overflow-hidden">
-
     @include('shared.backgroundDashboard')
 
         {{-- Efek Sinar Emas (Dari kode awal temanmu) --}}
         @include('shared.rayLightEffect')
 
         {{-- Container Utama: Dilebarkan ke max-w-7xl agar space kosong kiri-kanan berkurang --}}
-        <div class="relative z-10 max-w-7xl mx-auto flex flex-col gap-8">
+        <div class="relative z-20 max-w-7xl mx-auto flex flex-col gap-8">
 
-            {{-- ========================================================= --}}
-            {{-- BAGIAN 1: HEADER DASHBOARD                                --}}
-            {{-- ========================================================= --}}
-            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-amber-500/20 pb-6">
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-amber-500/20 pb-6 z-10">
                 <div>
                     <span class="text-xs font-semibold uppercase tracking-widest text-amber-400">
                         Admin-Only Page
@@ -29,7 +26,7 @@
                     <h1 class="text-3xl lg:text-4xl font-bold text-white mt-1">
                         Dashboard <span class="text-amber-400">Edit Contents</span>
                     </h1>
-                    <p class="text-neutral-400 text-sm mt-1">
+                    <p class="text-neutral-300 text-sm mt-1">
                         Manage all page content from here.
                     </p>
                 </div>
@@ -40,9 +37,6 @@
             </div>
 
 
-            {{-- ========================================================= --}}
-            {{-- BAGIAN 3: DAFTAR KONTEN WEBSITE (CRUD)                    --}}
-            {{-- ========================================================= --}}
             <div class="rounded-2xl bg-neutral-900/60 backdrop-blur-md border border-amber-500/25 p-6 lg:p-8 shadow-xl">
                 <div class="mb-6">
                     <span class="text-xs font-medium text-amber-400">Contents • editing</span>
@@ -50,10 +44,9 @@
                     <p class="text-xs text-neutral-400 mt-1">Pilih bagian di bawah ini untuk mengubah teks atau data di database.</p>
                 </div>
 
-                {{-- Susunan Item ke Bawah --}}
+                
                 <div class="flex flex-col gap-4">
 
-                    {{-- 1. Layanan --}}
                     <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 p-4 rounded-xl bg-neutral-950/70 border border-neutral-800 hover:border-amber-400/40 transition">
                         <div class="flex items-start sm:items-center gap-4">
                             <div class="w-10 h-10 rounded-lg bg-amber-500/15 text-amber-400 flex items-center justify-center font-bold shrink-0">

@@ -23,7 +23,7 @@
                 </td>
 
                 <td>
-                    <a href="{{ route('edit-laptop', $layanan->id) }}"
+                    <a href="{{ route('edit-layanan', $layanan->id) }}"
                         style="background:brown; color:white; padding: 2px 6px; text-decoration:none;">
                         Edit
                     </a>
@@ -31,5 +31,10 @@
             </tr>
         @endforeach
     </table>
+    <a href="{{ route('new-layanan-route') }}">
+        <button class="rounded-sm bg-yellow-600 px-4 py-3 px-10 font-medium text-white transition hover:bg-yellow-700">
+            add new layanan
+        </button>
+    </a>
 </section>
 @endsection
