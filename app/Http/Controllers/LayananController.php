@@ -30,7 +30,14 @@ class LayananController extends Controller
         ]);
 
         if ($request->hasFile('image')) {
-            $imageName = time() . '_' . $request->file('image')->getClientOriginalName();
+            $imageName = $request->file('image')->getClientOriginalName();
+
+            if (file_exists(public_path('images/' . $imageName))) {
+                return back()
+                    ->withErrors(['image' => 'Nama file gambar udah ada, ganti nama filenya dulu.'])
+                    ->withInput();
+            }
+
             $request->file('image')->move(public_path('images'), $imageName);
             $data['image'] = $imageName;
         }
@@ -54,7 +61,14 @@ class LayananController extends Controller
         ]);
 
         if ($request->hasFile('image')) {
-            $imageName = time() . '_' . $request->file('image')->getClientOriginalName();
+            $imageName = $request->file('image')->getClientOriginalName();
+
+            if (file_exists(public_path('images/' . $imageName))) {
+                return back()
+                    ->withErrors(['image' => 'Nama file gambar udah ada, ganti nama filenya dulu.'])
+                    ->withInput();
+            }
+
             $request->file('image')->move(public_path('images'), $imageName);
             $data['image'] = $imageName;
         } else {

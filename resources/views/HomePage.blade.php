@@ -36,7 +36,7 @@
 
     <main>
 
-        <section id='serviceSection' class="relative w-full h-auto">
+        <section id='serviceSection' class="relative w-full h-auto overflow-hidden">
 
             <!-- Container Efek Sinar -->
             <div class="hidden lg:block absolute top-0 right-0 w-full h-full overflow-hidden pointer-events-none z-50">
@@ -172,12 +172,10 @@
     </main>
 
 
-
     <footer
-        class="relative w-full h-screen text-neutral-300 pt-16 pb-8 font-sans overflow-hidden border-t border-amber-900/30">
+        class="relative w-full h-auto text-neutral-300 pt-12 pb-12 font-sans overflow-hidden border-t border-amber-900/30">
 
-
-        <div class="relative w-full h-[20vh] lg:h-[34vh] z-20">
+        <div class="relative w-full h-[20vh] lg:h-[34vh] z-20 mb-10">
             <img src="{{ asset('images/5_image.jpeg') }}" class="w-full h-full object-cover pointer-events-none"
                 alt="pemandangan">
 
@@ -195,15 +193,15 @@
             <div class="absolute inset-0 bg-neutral-950/90 backdrop-blur-sm"></div>
         </div>
 
-        <div class="relative z-10 container mx-auto px-6 lg:px-12 max-w-7xl">
+        <div class="relative z-10 container mx-auto px-6 lg:px-12 max-w-7xl flex flex-col items-center">
 
             <div
                 class="flex flex-col w-full items-center text-center text-xs text-neutral-500 border-t border-neutral-800/80 pt-6">
                 <p>&copy; 2026 Celver Audio. All rights reserved.</p>
             </div>
 
-            <div class="absolute w-full justify-center items-center mt-20 lg:mt-20 pointer-events-none select-none">
-                <h1 class="text-[20vw] lg:text-[10vw] font-extrabold leading-none tracking-tighter"
+            <div class="w-full flex justify-center items-center mt-8 pointer-events-none select-none">
+                <h1 class="text-[13vw] lg:text-[9vw] font-extrabold leading-none tracking-tighter text-center"
                     style="-webkit-text-stroke: 1px rgba(251, 191, 36, 0.25); color: transparent;">
                     CELVER AUDIO
                 </h1>
@@ -211,8 +209,5 @@
 
         </div>
     </footer>
-
-    </body>
-
 
 @endsection
