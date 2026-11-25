@@ -35,8 +35,13 @@ Route::get('/dashboard/edit/Bannerpage', [BannerController::class, 'view'])->nam
 //formContact
 
 //formLayanan
-Route::get('/dashboard/view/list-layanan/', [LayananController::class, 'view'])->name('list-layanan-route');
-
+// Route::get('/dashboard/view/list-layanan/', [LayananController::class, 'view'])->name('list-layanan-route');
+Route::get('/dashboard/view/list-layanan', [LayananController::class, 'view'])->name('list-layanan');
+Route::get('/dashboard/view/create-layanan', [LayananController::class, 'create'])->name('create-layanan');
+Route::post('/dashboard/view/store-layanan', [LayananController::class, 'store'])->name('store-layanan');
+Route::get('/dashboard/view/edit-layanan/{layanan}', [LayananController::class, 'edit'])->name('edit-layanan');
+Route::post('/dashboard/view/update-layanan/{layanan}', [LayananController::class, 'update'])->name('update-layanan');
+Route::post('/dashboard/view/delete-layanan/{layanan}', [LayananController::class, 'destroy'])->name('delete-layanan');
 
 //formTesting (crud latihan di kelas)
 Route::get('/testing', [TestingController::class, 'index']);
