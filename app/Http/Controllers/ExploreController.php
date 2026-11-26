@@ -7,6 +7,7 @@ use App\Models\SceneryBanner;
 use App\Models\Venue;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage; // jgn lupa ini utk delete image
 
 class ExploreController extends Controller
 {
@@ -32,6 +33,15 @@ class ExploreController extends Controller
         ] );
     }
 
+
+    public function index(Request $request) {
+        $search = $request->query('search', ''); //'' diggunakan saat user tidak memasukan search apapun, maka '' ini sebagai nilai default yang bertujuan untuk menampilkan semua data, instead mengembalikan null
+        $portfolios = Venue::where('titlePlace', 'like',  //ditambahin operator'like' ini karena sebelumnya gaada operator ini maka laravel nya bakal nyari sama persis yang di input di form nya, terus meskipun kamu ketik judul nya sama persis 'qwe' gitu tetap tidak muncul karena di db yang dicari bukan 'qwe' tapi '%'qwe%' dan ngasi function 'like' itu biar bisa munculin judul yang mirip dengan yang kamu search
+        '%' . $search . '%')->orderBy('id')->paginate(10)->withQueryString();
+        return view('index-search.venueIndex', compact('portfolios'));
+    }
+
+
     public function create()
     {
         return view('dashboard-editView.Venue.createVenue');
@@ -42,37 +52,24 @@ class ExploreController extends Controller
         $data = $request->validate([
         'titlePlace' => 'required|string|max:50|min:1',
         'descriptionPlace' => 'nullable|string|max:1200',
-        'image'  => 'nullable|image|mimes:jpg,jpeg,png,webp|max:2048',
+        'image'  => 'nullable|image|max:2048',
         ]);
 
-
-        if ($request->hasFile('image')) {
-
-            $imageName = basename(
-                $request->file('image')->getClientOriginalName()
-            );
-
-            if (file_exists(public_path('images/' . $imageName))) {
-                return back()->withErrors([
-                    'image' => 'The image file name already exists, change the file name!'
-                ]);
-            }
-
-            $request->file('image')->move(public_path('images'), $imageName);
-
-            $data['image'] = $imageName;
-        }
-
-
-
+        $data['image'] = $request->file('image')
+            ->store('venue', 'public');
         Venue::create($data);
 
         return redirect('/dashboard/view/list-portfolio/');
     }
 
-    public function destroy(Request $request)
+    public function destroy(Venue $portfolio)
     {
-        Venue::destroy($request->id);
+        if ($portfolio->image) { 
+        Storage::disk('public')->delete($portfolio->image); 
+        }
+
+        $portfolio->delete();    
+
         return redirect('/dashboard/view/list-portfolio/');
     }
 
@@ -91,31 +88,19 @@ class ExploreController extends Controller
         $data = $request->validate([
         'titlePlace' => 'required|string|max:50|min:1',
         'descriptionPlace' => 'nullable|string|max:1200',
-        'image'  => 'nullable|image|mimes:jpg,jpeg,png,webp|max:2048',
+        'image'  => 'nullable|image|max:2048',
         ]);
 
-        if ($request->hasFile('image')) {
+            if ($request->hasFile('image')) {
+                $old = $portfolio->image;
+                $portfolio->image = $request->file('image')
+                ->store('venue', 'public');
+                $portfolio->save();
 
-        $imageName = basename(
-            $request->file('image')->getClientOriginalName()
-        );
+            if ($old) Storage::disk('public')->delete($old);
+            }
 
-        if ($imageName !== $portfolio->image && file_exists(public_path('images/' . $imageName))) {
-            return back()->withErrors([
-                'image' => 'The image file name already exists, change the file name!'
-            ]);
-        }
-
-        $request->file('image')->move( public_path('images'), $imageName );
-        
-        $data['image'] = $imageName;
-
-        } else {
-            unset($data['image']);
-        }
-
-
-        $portfolio->update($data);
+            $portfolio->update($data);
 
     return redirect('/dashboard/view/list-portfolio/');
     }

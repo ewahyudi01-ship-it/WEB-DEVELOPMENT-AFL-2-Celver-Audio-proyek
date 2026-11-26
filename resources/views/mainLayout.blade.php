@@ -10,7 +10,7 @@
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
     <link rel="stylesheet" href="{{ asset('style.css') }}">
 </head>
-<body class="bg-[rgb(11,11,11)] overflow-x-hidden">
+<body class="bg-[rgb(11,11,11)]">
 
     @yield('content')
 

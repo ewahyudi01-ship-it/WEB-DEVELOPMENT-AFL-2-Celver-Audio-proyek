@@ -15,7 +15,7 @@
                 <td>{{ $layanan->image }}</td>
 
                 <td>
-                    <form action="{{ route('delete-laptop') }}" method="POST">
+                    <form action="{{ route('delete-layanan', $layanan) }}" method="POST">
                         @csrf
                         <input type="hidden" name="id" value="{{  $layanan->id  }}">
                         <input style="background:red; color:white" type="submit" value="hapus">

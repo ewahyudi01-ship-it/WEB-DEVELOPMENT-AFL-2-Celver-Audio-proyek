@@ -8,7 +8,7 @@ class BannerController extends Controller
 {
     public function view()
     {
-      return view('editPageBannerDashboard');
+      return view('/dashboard-editView.Banner.editPageBannerDashboard');
     }
 
     public function destroy(\Illuminate\Http\Request $request)

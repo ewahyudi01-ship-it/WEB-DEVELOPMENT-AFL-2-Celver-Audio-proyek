@@ -15,9 +15,9 @@
                 <td>{{ $portfolio->image }}</td>
 
                 <td>
-                    <form action="{{ route('delete-portfolio') }}" method="POST">
+                    <form action="{{ route('delete-portfolio', $portfolio) }}" method="POST">
                         @csrf
-                        <input type="hidden" name="id" value="{{  $portfolio->id  }}">
+                        <input type="hidden" name="id" value="{{  $portfolio->id   }}">
                         <input style="background:red; color:white" type="submit" value="hapus">
                     </form>
                 </td>

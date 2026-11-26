@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Layanan;
+use Illuminate\Support\Facades\Storage; 
 
 class LayananController extends Controller
 {
@@ -26,27 +27,12 @@ class LayananController extends Controller
         $data = $request->validate([
             'title' => 'required|string|max:255',
             'description' => 'required|string',
-            'image' => 'nullable|image|mimes:jpg,jpeg,png,webp|max:2048',
+            'image' => 'nullable|image|max:2048',
         ]);
 
-        if ($request->hasFile('image')) {
-
-            $imageName = basename(
-                $request->file('image')->getClientOriginalName()
-            );
-
-            if (file_exists(public_path('images/' . $imageName))) {
-                return back()->withErrors([
-                    'image' => 'The image file name already exists, change the file name!'
-                ]);
-            }
-
-            $request->file('image')->move(public_path('images'), $imageName);
-
-            $data['image'] = $imageName;
-        }
-
-        Layanan::create($data); 
+        $data['image'] = $request->file('image')
+            ->store('service', 'public');
+        Layanan::create($data);
 
         return redirect('/dashboard/view/list-layanan/');
     }
@@ -65,39 +51,32 @@ class LayananController extends Controller
         $data = $request->validate([
             'title' => 'required|string|max:255',
             'description' => 'required|string',
-            'image' => 'nullable|image|mimes:jpg,jpeg,png,webp|max:2048',
+            'image' => 'nullable|image|max:2048',
         ]);
 
         if ($request->hasFile('image')) {
+            $old = $layanan->image;
+            $layanan->image = $request->file('image')
+                ->store('venue', 'public');
+            $layanan->save();
 
-        $imageName = basename(
-            $request->file('image')->getClientOriginalName()
-        );
+            if ($old) Storage::disk('public')->delete($old);
+            }
 
-        if ($imageName !== $layanan->image && file_exists(public_path('images/' . $imageName))) {
-            return back()->withErrors([
-                'image' => 'The image file name already exists, change the file name!'
-            ]);
-        }
+            $layanan->update($data);
 
-        $request->file('image')->move( public_path('images'), $imageName );
-
-        $data['image'] = $imageName;
-
-        } else {
-            unset($data['image']);
-        }
-
-        $layanan->update($data);
-
-        return redirect('/dashboard/view/list-layanan/');
+    return redirect('/dashboard/view/list-layanan/');
     }
 
 
 
-    public function destroy(Request $request)
+    public function destroy(Layanan $layanan)
     {
-        Layanan::destroy($request->id);
+        if ($layanan->image) { 
+        Storage::disk('public')->delete($layanan->image); 
+        }
+
+        $layanan->delete();    
 
         return redirect('/dashboard/view/list-layanan/');
     }

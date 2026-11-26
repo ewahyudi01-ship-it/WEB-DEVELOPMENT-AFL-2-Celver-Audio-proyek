@@ -2,13 +2,15 @@
 
 @section('content')
 
-    <div class="absolute inset-0">
+    <div class="absolute top-0">
         @include('shared.navbar')
     </div>
 
     <section class="relative w-full h-screen overflow-hidden flex items-center">
 
-        @include('shared.backgroundDashboard')
+        <div class="fixed inset-0 w-full h-full">
+            @include('shared.backgroundDashboard')
+        </div>
 
         <!-- efek sinar lagi -->
         @include('shared.rayLightEffect')
@@ -78,7 +80,18 @@
             <h1 class="pt-20 text-2xl text-center text-shadow-2xs text-white font-bold z-10 tracking-[10px]">
                 DASHBOARD
             </h1>
+            @auth
+                <p class="text-md text-center text-shadow-2xs text-white z-10 tracking-[7px]">Welcome, {{ auth()->user()->name }}</p>
 
+            <div class="relative flex justify-center pt-5 w-full h-fit">
+                <form action="/logout" method="POST">
+                    @csrf
+                    <button type="submit" 
+                        class="px-6 py-2.5 rounded-xl text-md font-bold text-neutral-950 bg-amber-400 hover:bg-amber-300 shadow-[0_0_15px_rgba(251,191,36,0.3)] hover:shadow-[0_0_20px_rgba(251,191,36,0.5)] transition cursor-pointer z-20">Logout
+                    </button>
+                </form>
+            </div>
+            @endauth
         </div>
 
 

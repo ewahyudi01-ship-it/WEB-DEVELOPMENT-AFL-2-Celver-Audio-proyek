@@ -76,7 +76,7 @@
                     <h2 class="text-2xl md:text-3xl text-white font-medium">Let's talk.</h2>
 
                    <p class="text-gray-400 text-sm md:text-base leading-relaxed max-w-md">
-                    Have something in mind? Feel free to reach out to us. We would love to hear from you and help with your needs.
+                        Have something in mind? Feel free to reach out to us. We would love to hear from you and help with your needs.
                    </p>
                 </div>
 
@@ -87,7 +87,7 @@
                         <textarea name="description" placeholder="Type here..."
                         class="w-full h-40 p-4 text-amber-400/90 border rounded-lg border-t border-amber-500/30 focus:outline-none" required>{{ old('description') }}</textarea>
                         @error('description')
-                            <p class="error">{{ $message }}</p>
+                            <p class="text-red-400 text-xs mt-1">{{ $message }}</p>
                         @enderror
 
                     </div>

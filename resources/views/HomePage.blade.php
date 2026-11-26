@@ -36,7 +36,7 @@
 
     <main>
 
-        <section id='serviceSection' class="relative w-full h-auto overflow-hidden">
+        <section id='serviceSection' class="relative w-full h-auto ">
 
             <!-- Container Efek Sinar -->
             <div class="hidden lg:block absolute top-0 right-0 w-full h-full overflow-hidden pointer-events-none z-50">
@@ -51,10 +51,10 @@
 
 
             <!-- Container khusus untuk img src, TEPAT dibawah ini -->
-            <div class="relative w-full lg:max-w-full h-[700px] lg:h-[750px] z-20 flex-col lg:flex-row lg:pr-60">
+            <div class="relative w-full lg:max-w-full h-[700px] lg:h-[750px] z-20 flex-col lg:flex-row lg:pr-60 ">
 
                 <img src="{{ asset('images/custom-bgColor.jpg.jpeg') }}" alt="Latar Belakang Gelap"
-                    class="absolute inset-0 w-full h-full lg:w-full lg:h-full object-cover z-0 pointer-events-none drop-shadow-[0_0_8px_rgba(251,191,36,0.3)]">
+                    class="absolute inset-0 w-full h-full lg:w-full lg:h-full object-cover z-10 pointer-events-none drop-shadow-[0_0_8px_rgba(251,191,36,0.3)]">
 
                 <img src="{{ asset('images/speaker_be_vibinV2.gif') }}" alt="Speaker DANCING"
                     class="absolute bottom-0 left-4 lg:left-120 w-48 lg:w-56 h-auto block object-contain z-40 pointer-events-none drop-shadow-[0_0_8px_rgba(251,191,36,0.3)]">
@@ -66,7 +66,7 @@
 
                     <div class="flex w-fulf top-0 l h-full justify-center lg:justify-start items-end lg:items-center overflow-hidden">
                         <img src="{{ asset('images/4_image.png') }}" alt="Gambar Depan"
-                            class="h-full w-auto object-contain">
+                            class="h-full w-auto object-contain ">
                     </div>
 
 
@@ -82,7 +82,7 @@
                         </div>
                     </div>
 
-                    <div class="lg:flex lg:flex-col justify-center gap-6 w-full h-full relative z-10">
+                    <div class="lg:flex lg:flex-col justify-center gap-6 w-full min-w-0 h-full relative z-10">
 
                         <!-- judul (Atas Kanan) -->
                         <div class="absolute lg:relative -top-15 lg:top-0 lg:flex flex-col gap-2 px-6 lg:px-0">
@@ -101,7 +101,7 @@
                                 <div class="relative w-72 lg:w-80 h-80 lg:h-90 mb-15 lg:mb-0 rounded-2xl overflow-hidden shrink-0 snap-start group/card border border-white/0 bg-[#2f2118] p-6 text-white backdrop-blur-sm hover:border-amber-400/40 transition-colors hover:drop-shadow-[0_0_8px_rgba(251,191,36,0.3)]">
 
                                     <img class="object-cover w-full h-full absolute inset-0 group-hover/card:scale-125 opacity-0 group-hover/card:opacity-100 transition-all duration-600 entered litespeed-loaded"
-                                        alt="gambar1" src="{{ asset('images/' . $layanan->image) }}">
+                                        alt="gambar1" src="{{ asset('storage/' . $layanan->image) }}">
 
                                     <div class="absolute inset-0 bg-black/30 opacity-0 group-hover/card:opacity-100 after:absolute after:inset-0 after:bg-linear-to-t after:from-black/80"></div>
 
@@ -124,13 +124,13 @@
 
                 </div>
             </div>
-            <div class="absolute bottom-0 h-[20vh] bg-gradient-to-t w-full from-black/50 via-black/20 to-transparent z-20">
+            <div class="absolute bottom-0 h-[20vh] bg-gradient-to-t w-full from-black/50 via-black/20 to-transparent z-20 ">
             </div>
 
         </section>
 
 
-        <section id='achivementSection' class="relative w-full py-20 bg-[#120a06] text-white overflow-hidden">
+        <section id='achivementSection' class="relative w-full py-20 bg-[#120a06] text-white overflow-hidden z-0">
 
             <div class="absolute top-1/2 -right-20 w-96 h-96 bg-amber-500/10 rounded-full blur-3xl pointer-events-none">
             </div>
@@ -140,8 +140,9 @@
                 <div class="lg:col-span-5 flex flex-col justify-center">
                     <span class="text-amber-400 font-semibold tracking-wider uppercase text-xs mb-2">Track Record</span>
                     <h2 class="text-4xl lg:text-5xl font-bold mb-6 leading-tight">
-                        Our <span
-                            class="text-transparent bg-clip-text bg-gradient-to-r from-amber-300 via-amber-400 to-amber-600">Achievements</span>
+                        Our
+                        <span class="text-transparent bg-clip-text bg-gradient-to-r from-amber-300 via-amber-400 to-amber-600">
+                            Achievements</span>
                     </h2>
                     <p class="text-gray-400 text-sm leading-relaxed">
                         Menyediakan konfigurasi sistem audio tingkat profesional dengan presisi akustik tinggi untuk
@@ -202,7 +203,7 @@
             </div>
 
             <div class="absolute w-full justify-center items-center mt-20 lg:mt-20 pointer-events-none select-none">
-                <h1 class="text-[20vw] lg:text-[10vw] font-extrabold leading-none tracking-tighter"
+                <h1 class="text-[20vw] lg:text-[10vw] font-extrabold leading-none tracking-tighter text-center"
                     style="-webkit-text-stroke: 1px rgba(251, 191, 36, 0.25); color: transparent;">
                     CELVER AUDIO
                 </h1>

@@ -9,7 +9,7 @@ class MessageController extends Controller
     public function store(Request $request)
     {
         $data = $request->validate([
-        'description' => 'required|string|max:255|min:1',
+        'description' => 'required|string|max:1000|min:1',
         ]);
 
         Message::create($data);

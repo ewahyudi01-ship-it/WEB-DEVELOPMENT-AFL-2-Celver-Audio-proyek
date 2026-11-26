@@ -66,7 +66,7 @@
 
                 @if($portfolio->image)
                     <div class="mb-3 flex items-center gap-4 p-3 rounded-xl bg-neutral-950/60 border border-neutral-800">
-                        <img src="{{ asset('images/' . $portfolio->image) }}" alt="{{ $portfolio->titlePlace }}" 
+                        <img src="{{ asset('storage/' . $portfolio->image) }}" alt="{{ $portfolio->titlePlace }}" 
                              class="w-20 h-14 object-cover rounded-lg border border-neutral-700">
                         <div class="text-xs text-neutral-400">
                             <p class="text-neutral-200 font-medium">Current Image:</p>

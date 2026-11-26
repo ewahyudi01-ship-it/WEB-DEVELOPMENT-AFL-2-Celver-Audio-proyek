@@ -1,12 +1,12 @@
 @extends('mainLayout')
 
 @section('content')
-<section class="min-h-screen bg-[#100e0c] pt-35 py-16 lg:pt-50">
 
-    <div class="absolute inset-0">
+    <div class="absolute top-0">
         @include('shared.navbar')
     </div>
 
+<section class="min-h-screen bg-[#100e0c] pt-35 py-16 lg:pt-50">
 
     <div class="mx-auto max-w-2xl">
 
