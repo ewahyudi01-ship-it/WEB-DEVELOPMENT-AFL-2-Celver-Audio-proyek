@@ -30,8 +30,10 @@ class LayananController extends Controller
             'image' => 'nullable|image|max:2048',
         ]);
 
+        if ($request->hasFile('image')) {
         $data['image'] = $request->file('image')
             ->store('service', 'public');
+        }
         Layanan::create($data);
 
         return redirect('/dashboard/view/list-layanan/');
@@ -61,7 +63,7 @@ class LayananController extends Controller
             $layanan->save();
 
             if ($old) Storage::disk('public')->delete($old);
-            }
+        }
 
             $layanan->update($data);
 

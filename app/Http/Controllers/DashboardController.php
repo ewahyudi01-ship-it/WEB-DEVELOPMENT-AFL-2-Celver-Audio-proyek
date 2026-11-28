@@ -23,17 +23,9 @@ class DashboardController extends Controller
     }
 
 
-    public function destroy(\Illuminate\Http\Request $request)
-    {
-        testing::destroy($request->id);
-        return redirect('/testing');
-    }
-
-
-
     public function showNotification()
     {
-        $message = Message::all();
+        $message = Message::orderBy('id')->paginate(5);
 
         return view('notificationPage',[
         'messages' => $message,

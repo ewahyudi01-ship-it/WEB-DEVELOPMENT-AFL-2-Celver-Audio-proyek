@@ -7,12 +7,11 @@
         @include('shared.navbar')
         
     </div>
-        <div class="bg-parallax absolute inset-0 w-full h-full bg-cover bg-center z-0"
+        <div class="bg-parallax absolute inset-0 w-full h-full bg-cover bg-center z-0 intro-fadeIn-bg"
             style="background-image: url('{{ asset('images/notification-bg.jpeg') }}'); background-size: cover; background-position: center; background-repeat: no-repeat;">
         </div>
     
     <section class="relative w-full min-h-screen h-auto lg:h-screen overflow-hidden flex flex-col pt-30 lg:flex-row lg:pt-0 items-center "> 
-                @include('shared.rayLightEffect')
 
         <div class="relative w-max h-full flex flex-col justify-center bg-black/50 lg:px-20">
             <p class="text-amber-500 text-xs tracking-[5px] font-semibold">ADMIN PANEL</p>
@@ -27,8 +26,8 @@
 
         <div class="absolute flex w-10 h-full bg-linear-to-r from-[rgb(14,14,14)] to-transparent z-30"></div>
 
-            <div class="h-full min-h-0 w-1/2 h-auto lg:mr-140 overflow-y-auto flex flex-col gap-5 lg:gap-6 pb-6 lg:pb-0 lg:px-15 lg:snap-x lg:snap-mandatory scrollbar-track-amber-400/10">
-            
+            <div class="h-full min-h-0 w-full h-auto lg:mr-140 overflow-y-auto flex flex-col gap-5 lg:gap-6 pb-6 lg:pb-0 lg:px-15 lg:snap-x lg:snap-mandatory scrollbar-track-amber-400/10">
+
                     @forelse ($messages as $message)
 
                         <div class="relative w-full h-80 lg:h-auto lg:mb-0 shrink-0 rounded-xl overflow-hidden snap-start group/card text-center text-[8px] lg:text-sm py-3 lg:py-2 mt-2 text-amber-100 drop-shadow-[0_0_3px_rgba(207,118,0,1)] bg-white/1 backdrop-blur-md border transition duration-300 border-white/1 rounded-2xl shadow-[inset_0_0_15px_rgba(245,158,11,0.2)] hover:shadow-[inset_0_0_25px_rgba(255,128,0,0.45),0_0_25px_rgba(255,128,0,0.3)]">
@@ -62,6 +61,7 @@
                     </div>
 
                     @endforelse
+                    {{ $messages->links() }}
             </div>
         </div>
 

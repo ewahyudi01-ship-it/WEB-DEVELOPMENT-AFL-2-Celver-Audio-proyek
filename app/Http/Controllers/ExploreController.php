@@ -14,8 +14,8 @@ class ExploreController extends Controller
     public function viewVenue()
     {
         $interior = InteriorBanner::first();
-        $scenery = SceneryBanner::first();
-        $venue = Venue::all();
+        $scenery = SceneryBanner::first();          //FRAGMENT, membuat ketika mau memunculkan data berikut nya misal dari 9 ke 18, maka halaman nya langsung ke section 'aboutUs-section' di VenuePage.blade.php pada baris 57, tanpa FRAGMENT maka malah ke bagian paling atas pov nya walaupun datanya ikut berubah.
+        $venue = Venue::orderBy('id')->paginate(9)->fragment('aboutUs-section');
 
 
         return view('VenuePage',[
@@ -35,7 +35,7 @@ class ExploreController extends Controller
 
 
     public function index(Request $request) {
-        $search = $request->query('search', ''); //'' diggunakan saat user tidak memasukan search apapun, maka '' ini sebagai nilai default yang bertujuan untuk menampilkan semua data, instead mengembalikan null
+        $search = $request->query('search', ''); //'' diggunakan SAAT user tidak memasukan search apapun, maka '' ini sebagai nilai default yang bertujuan untuk menampilkan semua data, instead mengembalikan null
         $portfolios = Venue::where('titlePlace', 'like',  //ditambahin operator'like' ini karena sebelumnya gaada operator ini maka laravel nya bakal nyari sama persis yang di input di form nya, terus meskipun kamu ketik judul nya sama persis 'qwe' gitu tetap tidak muncul karena di db yang dicari bukan 'qwe' tapi '%'qwe%' dan ngasi function 'like' itu biar bisa munculin judul yang mirip dengan yang kamu search
         '%' . $search . '%')->orderBy('id')->paginate(10)->withQueryString();
         return view('index-search.venueIndex', compact('portfolios'));
@@ -55,8 +55,10 @@ class ExploreController extends Controller
         'image'  => 'nullable|image|max:2048',
         ]);
 
+        if ($request->hasFile('image')) {
         $data['image'] = $request->file('image')
             ->store('venue', 'public');
+        }
         Venue::create($data);
 
         return redirect('/dashboard/view/list-portfolio/');

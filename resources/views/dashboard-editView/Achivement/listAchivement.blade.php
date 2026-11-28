@@ -1,7 +1,25 @@
 @extends('mainLayout')
 
 @section('content')
-<section class="bg-white">
+
+    <div class="relative z-40">
+        @include('shared.navbar')
+    </div>
+    
+ <div class="fixed inset-0 w-full h-full">
+        @include('shared.backgroundDashboard')
+    </div>
+
+<section class="w-full lg:px-80 lg:pt-50">
+
+      <div class="relative w-full h-full">
+        <a href="{{ route('new-achivement-route') }}">
+                <button class="rounded-sm bg-yellow-600 px-4 py-3 px-10 font-medium text-white transition hover:bg-yellow-700">
+                    add new achivement
+                </button>
+            </a>
+      </div>
+
     <table>
         <tr>
             <th>titleDesc</th>
@@ -33,10 +51,6 @@
             </tr>
         @endforeach
     </table>
-    <a href="{{ route('new-achivement-route') }}">
-        <button class="rounded-sm bg-yellow-600 px-4 py-3 px-10 font-medium text-white transition hover:bg-yellow-700">
-            add new achivement
-        </button>
-    </a>
+    
 </section>
 @endsection

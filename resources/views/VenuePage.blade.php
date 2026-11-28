@@ -54,7 +54,7 @@
 
             </header>
 
-            <section class="relative w-full min-h-screen">
+            <section id="aboutUs-section" class="relative w-full min-h-screen">
 
                 <div class="absolute inset-0 -top-10 w-full min-h-full flex flex-col items-center justify-center bg-[#0f0c0a] z-30 drop-shadow-[0_0_8px_rgba(251,191,36,0.3)] overflow-x-hidden">
 
@@ -73,14 +73,14 @@
                             <div class="relative flex flex-row justify-center w-full h-auto mt-10"> 
                                 <form action="/explore/search" method="GET">
                                     <input type="text" name="search"
-                                    placeholder="Search portfolio.."
+                                    placeholder="Search portfolio"
                                     value="{{ request('search') }}"
                                     class="border px-5 border-amber-400/40 text-neutral-400 text-xl lg:text-xl rounded-2xl mb-4 focus:outline-none" >
 
-                                <button type="submit"
-                                    class="pl-5 border border-amber-400/40 px-2 text-neutral-400 text-xl lg:text-2xl rounded-2xl mb-4 focus:outline-none">
-                                    ⌕
-                                </button>
+                                    <button type="submit"
+                                        class="px-2 border border-amber-400/40 text-neutral-400 text-xl lg:text-2xl rounded-2xl  focus:outline-none">
+                                        ⌕
+                                    </button>
                                 </form>
                             </div>
                         </div>
@@ -88,13 +88,16 @@
                         <div class="w-full max-w-6xl mt-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:px-25">
 
                             @forelse ($venues as $venue)
-                                <div class="h-full flex flex-col border hover:border-amber-400/50 rounded-xl hover:drop-shadow-[0_0_8px_rgba(251,191,36,0.3)] overflow-hidden transition duration-300">
+                                <div class="h-full flex flex-col rounded-xl hover:drop-shadow-[0_0_8px_rgba(251,191,36,0.3)] overflow-hidden transition duration-300">
 
                                 @if ($venue->image)
-                                    <div class="w-full aspect-video overflow-hidden bg-neutral-800">
+                                    <div class="w-full overflow-hidden bg-neutral-800">
                                         <img src="{{ asset('storage/' . $venue->image) }}" alt="{{ $venue->titlePlace }}"
                                             class="w-full h-full object-cover hover:scale-105 transition duration-500">
                                     </div>
+
+                                @else
+                                    <div class="relative h-full overflow-hidden "></div>
                                 @endif    
 
                                     <div class="flex flex-col flex-grow justify-between">
@@ -114,6 +117,8 @@
                                     Empty Spaces here...
                                 </div>
                             @endforelse
+                            {{ $venues->links() }}
+
                         </div>
 
                     </div>

@@ -20,7 +20,7 @@
                 </p>
             </div>
 
-            <a href="{{ url()->previous() }}"
+            <a href="{{ route('list-contact-route') }}"
                class="text-xs sm:text-sm text-neutral-400 hover:text-amber-300 border border-neutral-700 hover:border-amber-400/50 rounded-lg px-3 py-1.5 transition">
                 &larr; Back
             </a>

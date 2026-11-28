@@ -87,10 +87,10 @@
             duration: 10
         });
 
-        gsap.from("#intro-contact-banner", {
+        gsap.from(".intro-fadeIn-bg", {
             y: 0,
             opacity: 0,
-            duration: 3
+            duration: 1
         });
 
         gsap.from("#intro-button", {
@@ -111,10 +111,22 @@
             duration: 1
         });
 
-        gsap.from(".intro-dashboard-3", {
-            y: -20,
-            opacity: 0,
-            duration: 1
+        gsap.from(".entrace-left-1", {
+            x: -20,
+            opacity: 1,
+            duration: 2
+        });
+
+        gsap.from(".entrace-left-2", {
+            x: -160,
+            opacity: 1,
+            duration: 2
+        });
+
+        gsap.from(".entrace-left-3", {
+            x: -290,
+            opacity: 1,
+            duration: 2
         });
 
     </script>

@@ -8,7 +8,6 @@
         
     @endforeach
         {{ $portfolios->links() }}
-<p>p</p>
 
 </div>
 

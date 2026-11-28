@@ -42,45 +42,45 @@ Route::middleware ('auth')->group(function () {
     Route::get('/dashboard/view/Notification', [DashboardController::class, 'showNotification'])->name('notification-route');
     Route::post('/dashboard/view/Notification/delete-form/{message}', [MessageController::class, 'destroy'])->name('delete-message');
 
-//formAchivement
-Route::get('/dashboard/view/list-achivement/', [AchivementController::class, 'view'])->name('list-achivement-route');
-Route::get('/dashboard/new/achivement/', [AchivementController::class, 'create'])->name('new-achivement-route');
-Route::post('/save-achivement', [AchivementController::class, 'store'])->name('save-achivement');
-Route::post('/delete-achivement', [AchivementController::class, 'destroy'])->name('delete-achivement');
-Route::get('/edit-achivement/{achivement}', [AchivementController::class, 'edit'])->name('edit-achivement');
-Route::post('/update-achivement/{achivement}', [AchivementController::class, 'update'])->name('update-achivement');
+    //formAchivement
+    Route::get('/dashboard/view/list-achivement/', [AchivementController::class, 'view'])->name('list-achivement-route');
+    Route::get('/dashboard/new/achivement/', [AchivementController::class, 'create'])->name('new-achivement-route');
+    Route::post('/save-achivement', [AchivementController::class, 'store'])->name('save-achivement');
+    Route::post('/delete-achivement', [AchivementController::class, 'destroy'])->name('delete-achivement');
+    Route::get('/edit-achivement/{achivement}', [AchivementController::class, 'edit'])->name('edit-achivement');
+    Route::post('/update-achivement/{achivement}', [AchivementController::class, 'update'])->name('update-achivement');
 
 
-//formBanner
-Route::get('/dashboard/edit/Bannerpage', [BannerController::class, 'view'])->name('edit-Banner-route');
-Route::post('/dashboard/update/scenery/Bannerpage/{sceneryBanner}', [BannerController::class, 'updateScenery'])->name('update-scenery-banner');
-Route::post('/dashboard/update/interior/Bannerpage/{interiorBanner}', [BannerController::class, 'updateInterior'])->name('update-interior-banner');
-
-
-
-//formContact
-Route::get('/dashboard/view/list-contact/', [ContactController::class, 'view'])->name('list-contact-route');
-Route::get('/edit-contact/{contact}', [ContactController::class, 'edit'])->name('edit-contact');
-Route::post('/update-contact/{contact}', [ContactController::class, 'update'])->name('update-contact');
+    //formBanner
+    Route::get('/dashboard/edit/Bannerpage', [BannerController::class, 'view'])->name('edit-Banner-route');
+    Route::post('/dashboard/update/scenery/Bannerpage/{sceneryBanner}', [BannerController::class, 'updateScenery'])->name('update-scenery-banner');
+    Route::post('/dashboard/update/interior/Bannerpage/{interiorBanner}', [BannerController::class, 'updateInterior'])->name('update-interior-banner');
 
 
 
-//formLayanan
-Route::get('/dashboard/view/list-layanan/', [LayananController::class, 'view'])->name('list-layanan-route');
-Route::get('/dashboard/new/layanan/', [LayananController::class, 'create'])->name('new-layanan-route');
-Route::post('/save-layanan', [LayananController::class, 'store'])->name('save-layanan');
-Route::post('/delete-layanan/{layanan}', [LayananController::class, 'destroy'])->name('delete-layanan');
-Route::get('/edit-layanan/{layanan}', [LayananController::class, 'edit'])->name('edit-layanan');
-Route::post('/update-layanan/{layanan}', [LayananController::class, 'update'])->name('update-layanan');
+    //formContact
+    Route::get('/dashboard/view/list-contact/', [ContactController::class, 'view'])->name('list-contact-route');
+    Route::get('/edit-contact/{contact}', [ContactController::class, 'edit'])->name('edit-contact');
+    Route::post('/update-contact/{contact}', [ContactController::class, 'update'])->name('update-contact');
 
 
-//formPortfolio
-Route::get('/dashboard/view/list-portfolio/', [ExploreController::class, 'view'])->name('list-portfolio-route');
-Route::get('/dashboard/new/portfolio/', [ExploreController::class, 'create'])->name('new-portfolio-route');
-Route::post('/save-portfolio', [ExploreController::class, 'store'])->name('save-portfolio');
-Route::post('/delete-portfolio/{portfolio}', [ExploreController::class, 'destroy'])->name('delete-portfolio');
-Route::get('/edit-portfolio/{portfolio}', [ExploreController::class, 'edit'])->name('edit-portfolio');
-Route::post('/update-portfolio/{portfolio}', [ExploreController::class, 'update'])->name('update-portfolio');
+
+    //formLayanan
+    Route::get('/dashboard/view/list-layanan/', [LayananController::class, 'view'])->name('list-layanan-route');
+    Route::get('/dashboard/new/layanan/', [LayananController::class, 'create'])->name('new-layanan-route');
+    Route::post('/save-layanan', [LayananController::class, 'store'])->name('save-layanan');
+    Route::post('/delete-layanan/{layanan}', [LayananController::class, 'destroy'])->name('delete-layanan');
+    Route::get('/edit-layanan/{layanan}', [LayananController::class, 'edit'])->name('edit-layanan');
+    Route::post('/update-layanan/{layanan}', [LayananController::class, 'update'])->name('update-layanan');
+
+
+    //formPortfolio
+    Route::get('/dashboard/view/list-portfolio/', [ExploreController::class, 'view'])->name('list-portfolio-route');
+    Route::get('/dashboard/new/portfolio/', [ExploreController::class, 'create'])->name('new-portfolio-route');
+    Route::post('/save-portfolio', [ExploreController::class, 'store'])->name('save-portfolio');
+    Route::post('/delete-portfolio/{portfolio}', [ExploreController::class, 'destroy'])->name('delete-portfolio');
+    Route::get('/edit-portfolio/{portfolio}', [ExploreController::class, 'edit'])->name('edit-portfolio');
+    Route::post('/update-portfolio/{portfolio}', [ExploreController::class, 'update'])->name('update-portfolio');
 });
 
 //formTesting (crud latihan di kelas)

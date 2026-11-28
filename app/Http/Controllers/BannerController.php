@@ -34,7 +34,7 @@ class BannerController extends Controller
           if ($old) Storage::disk('public')->delete($old);
     }
 
-    return redirect('/dashboard');
+    return redirect('/dashboard/edit/Bannerpage');
     }
     
     public function updateInterior(Request $request, InteriorBanner $interiorBanner)
@@ -51,16 +51,10 @@ class BannerController extends Controller
           if ($old) Storage::disk('public')->delete($old);
     }
 
-    return redirect('/dashboard');
+    return redirect('/dashboard/edit/Bannerpage');
     }
 
     public function destroy(\Illuminate\Http\Request $request)
     {
-    }
-
-
-    public function store(Request $request)
-    {
-
     }
 }

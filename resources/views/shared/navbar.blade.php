@@ -4,7 +4,7 @@
                 via-black/30 to-transparent ">
     </div>
 
-<nav class="fixed z-60 w-full h-[10vh] text-white bg-linear-to-b from-black/70 via-black/50 to-transparent py-5">
+<nav class="fixed z-60 w-full h-[10vh] text-white bg-linear-to-b from-black/70 via-black/60 to-transparent py-5">
     <div class="absolute inset-0 top-7 lg:top-1">
         <div class="flex justify-between mx-auto w-full max-w-8xl items-center px-5 lg:px-30">
 
@@ -15,6 +15,12 @@
             </a>
 
             <div class="hidden lg:flex justify-end gap-4 lg:gap-10 text-ms lg:text-[18px]">
+                @auth
+                <a href="{{ route('dashboard-route') }}" class="text-white font-bold hover:text-amber-300 transition">Dashboard</a>
+                @endauth
+                @guest
+                <a href="{{ route('login') }}" class="text-white hover:text-yellow-500">Login</a>
+                @endguest
                 <a href="{{ route('home-route') }}#serviceSection" class="font-[Outfit] text-shadow-lg hover:text-yellow-500 transition-all duration-200 ease-out">Service</a>
                 <a href="{{ route('home-route') }}#achivementSection" class="font-[Outfit] text-shadow-lg hover:text-yellow-500 transition-all duration-200 ease-out">Achivements</a>
                 <a href="{{ route('about-route') }}" class="font-[Outfit] text-shadow-lg hover:text-yellow-500 transition-all duration-200 ease-out">About</a>
@@ -29,25 +35,16 @@
             <div class="absolute right-0 top-full mt-4 w-48 rounded-xl border border-white/10 bg-[#e1e0df] shadow-xl p-5">
 
                 <div class="flex flex-col gap-5 text-sm">
-                    <a href="{{ route('home-route') }}#serviceSection"
-                       class="text-black hover:text-yellow-500">
-                        Service
-                    </a>
-
-                    <a href="{{ route('home-route') }}#achivementSection"
-                       class="text-black hover:text-yellow-500">
-                        Achievements
-                    </a>
-
-                    <a href="/explore"
-                       class="text-black hover:text-yellow-500">
-                        About
-                    </a>
-
-                    <a href="{{ route('contact-route') }}#contactSection"
-                       class="text-black hover:text-yellow-500">
-                        Contact
-                    </a>
+                    @auth
+                    <a href="{{ route('dashboard-route') }}" class="text-white font-bold hover:text-amber-300 transition">Dashboard</a>
+                    @endauth
+                    @guest
+                    <a href="{{ route('login') }}" class="text-black hover:text-yellow-500">Login</a>
+                    @endguest
+                    <a href="{{ route('home-route') }}#serviceSection" class="text-black hover:text-yellow-500">Service</a>
+                    <a href="{{ route('home-route') }}#achivementSection" class="text-black hover:text-yellow-500">Achievements</a>
+                    <a href="/explore" class="text-black hover:text-yellow-500">About</a>
+                    <a href="{{ route('contact-route') }}#contactSection" class="text-black hover:text-yellow-500">Contact</a>
                 </div>
             </div>
         </details>

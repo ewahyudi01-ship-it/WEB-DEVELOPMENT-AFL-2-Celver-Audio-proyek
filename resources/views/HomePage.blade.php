@@ -50,7 +50,6 @@
             </div>
 
 
-            <!-- Container khusus untuk img src, TEPAT dibawah ini -->
             <div class="relative w-full lg:max-w-full h-[700px] lg:h-[750px] z-20 flex-col lg:flex-row lg:pr-60 ">
 
                 <img src="{{ asset('images/custom-bgColor.jpg.jpeg') }}" alt="Latar Belakang Gelap"
@@ -70,16 +69,13 @@
                     </div>
 
 
-                    <!-- Dekorasi outline kuning (speaker) -->
-                    <div id='item-parallax'
-                        class="absolute inset-0 rounded-4xl left-40 top-10 lg:left-160 lg:top-20 w-[6vh] h-[6vh] lg:w-[3vh] lg:h-[36vh] outline-1 outline-yellow-200/50 flex items-center justify-center">
-                    </div>
-                    <div id='item-parallax'
-                        class="absolute inset-0 rounded-2xl left-70 top-10 lg:left-400 lg:top-130 w-[10vh] h-[10vh] lg:w-[8vh] lg:h-[8vh] outline-1 outline-yellow-200/50 flex items-center justify-center p-2">
-                        <div
-                            class="w-[75%] aspect-square rounded-full border border-yellow-200/50 flex items-center justify-center">
+                    <div id='item-parallax' class="absolute inset-0 rounded-4xl left-40 top-10 lg:left-160 lg:top-20 w-[6vh] h-[6vh] lg:w-[3vh] lg:h-[36vh] outline-1 outline-yellow-200/50 flex items-center justify-center"></div>
+                    <div id='item-parallax' class="absolute bottom-0 rounded-2xl right-5 top-10 lg:right-50 lg:top-145 w-[10vh] h-[10vh] lg:w-[8vh] lg:h-[8vh] outline-1 outline-yellow-200/50 flex items-center justify-center p-2">
+                    
+                        <div class="w-[75%] aspect-square rounded-full border border-yellow-200/50 flex items-center justify-center">
                             <div class="w-[40%] aspect-square rounded-full bg-yellow-200/40"></div>
                         </div>
+
                     </div>
 
                     <div class="lg:flex lg:flex-col justify-center gap-6 w-full min-w-0 h-full relative z-10">
@@ -94,15 +90,16 @@
                             </h2>
                         </div>
 
-                        <div class="w-full h-auto overflow-x-auto flex flex-nowrap gap-5 lg:gap-12 pb-6 snap-x snap-mandatory scrollbar-track-sky-100">
+                        <div class="w-full h-auto overflow-x-auto flex flex-nowrap gap-5 lg:gap-12 pb-6 snap-x snap-mandatory scrollbar-track-amber-400/10">
 
                             @foreach($layanans as $layanan)
 
                                 <div class="relative w-72 lg:w-80 h-80 lg:h-90 mb-15 lg:mb-0 rounded-2xl overflow-hidden shrink-0 snap-start group/card border border-white/0 bg-[#2f2118] p-6 text-white backdrop-blur-sm hover:border-amber-400/40 transition-colors hover:drop-shadow-[0_0_8px_rgba(251,191,36,0.3)]">
 
+                                @if ($layanan->image)
                                     <img class="object-cover w-full h-full absolute inset-0 group-hover/card:scale-125 opacity-0 group-hover/card:opacity-100 transition-all duration-600 entered litespeed-loaded"
                                         alt="gambar1" src="{{ asset('storage/' . $layanan->image) }}">
-
+                                @endif
                                     <div class="absolute inset-0 bg-black/30 opacity-0 group-hover/card:opacity-100 after:absolute after:inset-0 after:bg-linear-to-t after:from-black/80"></div>
 
                                     <div class="absolute left-0 w-full h-full flex flex-col justify-end top-0 ">
@@ -118,13 +115,14 @@
                                 </div>
 
                             @endforeach
+                            
                         </div>
-
+                        {{ $layanans->links() }}
                     </div>
 
                 </div>
             </div>
-            <div class="absolute bottom-0 h-[20vh] bg-gradient-to-t w-full from-black/50 via-black/20 to-transparent z-20 ">
+            <div class="absolute bottom-0 h-[5vh] bg-gradient-to-t w-full from-black/50 via-black/20 to-transparent z-20 ">
             </div>
 
         </section>
@@ -166,6 +164,7 @@
                             </p>
                         </div>
                     @endforeach
+                    {{ $achivements->links() }}
                 </div>
 
             </div>
@@ -184,7 +183,7 @@
             <div class="absolute inset-0 flex items-center justify-center bg-black/40">
                 <a href="{{ route('about-route') }}#serviceSection"
                     class="font-[Outfit] text-shadow-lg hover:text-yellow-500 transition-all duration-200 ease-out">
-                    <h3 class="text-white text-2xl lg:text-6xl hover:text-yellow-500 transition-all duration-200 ease-out">
+                    <h3 class="text-white text-4xl lg:text-6xl hover:text-yellow-500 transition-all duration-200 ease-out">
                         MORE ABOUT US?</h3>
                 </a>
             </div>

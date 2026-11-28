@@ -1,7 +1,17 @@
 @extends('mainLayout')
 
 @section('content')
-<section class="bg-white">
+
+    <div class="relative z-40">
+        @include('shared.navbar')
+    </div>
+    
+ <div class="fixed inset-0 w-full h-full">
+        @include('shared.backgroundDashboard')
+    </div>
+
+<section class="w-full lg:px-80 lg:pt-50">
+
     <table>
         <tr>
             <th>whatsapp</th>

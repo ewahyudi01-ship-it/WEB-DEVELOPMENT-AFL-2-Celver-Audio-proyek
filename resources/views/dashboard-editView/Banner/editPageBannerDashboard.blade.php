@@ -7,17 +7,15 @@
         @include('shared.navbar')
     </div>
 
-    {{-- pt-28 memberi jarak dari atas agar judul tidak tertutup navbar --}}
     <section class="relative min-h-screen w-full pt-28 pb-20 overflow-hidden">
     
     <div class="fixed inset-0 w-full h-full">
-            @include('shared.backgroundDashboard')
+        @include('shared.backgroundDashboard')
     </div>
         {{-- Efek Sinar Emas (Dari kode awal temanmu) --}}
         @include('shared.rayLightEffect')
 
 
-        {{-- Container Utama: Dilebarkan ke max-w-7xl agar space kosong kiri-kanan berkurang --}}
         <div class="relative z-10 max-w-7xl mx-auto flex flex-col gap-8">
             <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-amber-500/20 pb-6 text-shadow-[2px_4px_6px_rgba(0,0,0,0.5)]">
                 <div>
@@ -51,7 +49,7 @@
                         </div>
 
                         <button type="submit" class="px-4 py-2.5 rounded-xl bg-amber-500 hover:bg-amber-400 text-neutral-950 font-semibold text-sm transition cursor-pointer shrink-0"
-                            onclick="return confirm('Are you certain to update the banner?')">
+                            onclick="return confirm('Are you sure want to update the banner?')">
                             Update Banner
                         </button>
                     </div>
@@ -63,11 +61,11 @@
 
                         <img src="{{ asset('storage/' . $sceneryBanner->image) }}" class="absolute inset-0 w-full h-fit object-cover rounded-lg border border-neutral-700 ">
 
-                            <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 text-amber-400 mb-2 z-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 text-amber-400 mb-2 z-10 shadow-[4px_6px_16px_rgba(0,0,0,0.5)]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z " />
                             </svg>
                             <p class="text-sm font-medium text-neutral-200 z-10 text-shadow-[2px_2px_6px_rgba(0,0,0,0.5)]">Current Image:</p>
-                            <p class="text-xs text-neutral-400 mt-1 z-10 text-shadow-[2px_2px_6px_rgba(0,0,0,0.5)]">{{ $sceneryBanner->image }}</p>
+                            <p class="text-[9px] lg:text-xs text-neutral-400 mt-1 z-10 text-shadow-[2px_2px_6px_rgba(0,0,0,0.5)]">{{ $sceneryBanner->image }}</p>
                             @error('image')
                                 <p class="mt-2 text-sm font-medium text-red-400 z-10">
                                     {{ $message }}
@@ -77,7 +75,6 @@
                 </div>
                 @endif
             </form>
-
 
 
 
@@ -93,12 +90,12 @@
                         </div>
 
                         <div class="flex flex-col gap-2">
-                            <button type="button" class="px-4 py-2.5 rounded-xl border border-amber-400 bg-amber-900/10 hover:bg-amber-900/30 text-neutral-100 text-sm transition cursor-pointer shrink-0">
+                            <button type="button" onclick="openInfo()" class="px-4 py-2.5 rounded-xl border border-amber-400/50 bg-amber-900/10 hover:bg-neutral-900/30 text-neutral-100 text-sm transition cursor-pointer shrink-0">
                                 Info
                             </button>
                             
                             <button type="submit" class="px-4 py-2.5 rounded-xl bg-amber-500 hover:bg-amber-400 text-neutral-950 font-semibold text-sm transition cursor-pointer shrink-0"
-                                onclick="return confirm('Are you certain to update the banner?')">
+                                onclick="return confirm('Are you sure want to update the banner?')">
                                 Update Banner
                             </button>
                         </div>
@@ -111,11 +108,11 @@
 
                         <img src="{{ asset('storage/' . $interiorBanner->image) }}" class="absolute inset-0 w-full h-fit object-cover rounded-lg border border-neutral-700 ">
 
-                            <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 text-amber-400 mb-2 z-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 text-amber-400 mb-2 z-10 shadow-[4px_6px_16px_rgba(0,0,0,0.5)]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
                             </svg>
                             <p class="text-sm font-medium text-neutral-200 z-10 text-shadow-[2px_2px_6px_rgba(0,0,0,0.5)]">Current Image:</p>
-                            <p class="text-xs text-neutral-400 mt-1 z-10 text-shadow-[2px_2px_6px_rgba(0,0,0,0.5)]">{{ $interiorBanner->image }}</p>
+                            <p class="text-[9px] lg:text-xs text-neutral-400 mt-1 z-10 text-shadow-[2px_2px_6px_rgba(0,0,0,0.5)]">{{ $interiorBanner->image }}</p>
                             @error('image')
                                 <p class="mt-2 text-sm font-medium text-red-400 z-10">
                                     {{ $message }}
@@ -123,10 +120,60 @@
                             @enderror
                     </div>
                     @endif
-                </form>
-
-            </div>
+            </form>
+        </div>
             
+
+            <div id="info" onclick="closeInfo()" class="fixed inset-0 z-50 hidden items-center justify-center bg-black/20 p-4">
+
+                <div class="relative lg:w-1/2 h-auto rounded-2xl bg-linear-to-t from-amber-800/10 via-amber-500/10 to-amber-200/30 border border-neutral-700/30 backdrop-blur-xl p-6 text-neutral-100 shadow-[0_0_25px_rgba(0,0,0,0.2)]">
+                    <div class="flex items-center justify-between mb-3">
+                        <h3 class="text-2xl font-bold text-amber-400">How to add <span class="text-2xl font-bold text-white tracking-wide">Interior image</span></h3>
+                        <button type="button" onclick="closeInfo()"
+                            class="text-neutral-400 hover:text-white text-2xl leading-none cursor-pointer">
+                            &times;
+                        </button>
+                    </div>
+
+                    <div class="flex flex-col-2">
+                        <p class="text-sm text-neutral-300 leading-relaxed">
+                            1. Image should square ratio or 1:1 (in order to perfectly align position between mobile devices & computer devices.)
+                            <br>
+                            2. Make sure image are format as ".png" file, below 2 MB.
+                            <br>
+                            3. For desktop view, the empty area at the center of image, must went below just a litle from center, this will prevent interior image from fill up entire scenery image.
+                        </p>
+                    </div>    
+                    <div class="w-full flex flex-row items-center justify-between lg:px-20 pt-5 py-8 lg:py-20">
+                        <div id='item-parallax' class="rounded-2xl w-[10vh] h-[10vh] lg:w-[18vh] lg:h-[18vh] outline-2 outline-dashed outline-yellow-200/50 flex items-center justify-center entrace-left-1"><span class="text-[10px] lg:text-sm text-neutral-300">Ratio 1:1</span></div>
+                        <div id='item-parallax' class="rounded-2xl w-[10vh] h-[10vh] lg:w-[18vh] lg:h-[18vh] outline-1 outline-yellow-200/50 flex items-center justify-center entrace-left-2"><span class="text-[10px] lg:text-sm text-neutral-300">Mobile view</span></div>
+                        <div id='item-parallax' class="rounded-2xl bg-black/30 w-[10vh] h-[10vh] lg:w-[18vh] lg:h-[18vh] outline-1 outline-yellow-200/50 flex items-center justify-center entrace-left-3"><span class="text-[10px] lg:text-sm text-neutral-500 pb-[50%]">Mobile view</span>
+                            
+                            <div class="absolute mt-4 lg:mt-6 bg-white/10 h-[3vh] w-full lg:h-[6vh] outline-1 outline-yellow-200/50 flex items-center justify-center">
+                                <br><span class="text-[10px] lg:text-sm text-neutral-300">Desktop view</span>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <script>
+                function openInfo() {
+                    const info = document.getElementById('info');
+                    info.classList.remove('hidden');
+                    info.classList.add('flex');
+                }
+
+                function closeInfo() {
+                    const info = document.getElementById('info');
+                    info.classList.add('hidden');
+                    info.classList.remove('flex');
+                }
+            </script>
+
+
+
         </div>
 
     </section>
