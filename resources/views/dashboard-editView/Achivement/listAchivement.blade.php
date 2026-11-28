@@ -18,7 +18,9 @@
                     <form action="{{ route('delete-achivement') }}" method="POST">
                         @csrf
                         <input type="hidden" name="id" value="{{  $achivement->id  }}">
-                        <input style="background:red; color:white" type="submit" value="hapus">
+                        <input style="background:red; color:white" type="submit" 
+                        onclick="return confirm('Are you certain to delete this data? This action is permanent.')"
+                        value="delete">
                     </form>
                 </td>
 

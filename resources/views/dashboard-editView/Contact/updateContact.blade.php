@@ -6,6 +6,7 @@
     <div class="absolute inset-0">
         @include('shared.navbar')
     </div>
+        @include('shared.rayLightEffect')
 
 
     <div class="w-full max-w-2xl bg-neutral-900/90 backdrop-blur-md border border-amber-500/20 rounded-2xl shadow-2xl p-6 sm:p-10">
@@ -74,10 +75,6 @@
             </div>
 
             <div class="pt-4 flex items-center justify-end gap-3 border-t border-neutral-800">
-                <a href="{{ url()->previous() }}"
-                   class="px-5 py-2.5 rounded-xl text-sm font-medium text-neutral-300 hover:text-white bg-neutral-800 hover:bg-neutral-700 transition">
-                    Cancel
-                </a>
 
                 <button type="submit"
                     class="px-6 py-2.5 rounded-xl text-sm font-bold text-neutral-950 bg-amber-400 hover:bg-amber-300 shadow-[0_0_15px_rgba(251,191,36,0.3)] hover:shadow-[0_0_20px_rgba(251,191,36,0.5)] transition cursor-pointer">

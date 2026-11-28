@@ -18,7 +18,8 @@
                     <form action="{{ route('delete-portfolio', $portfolio) }}" method="POST">
                         @csrf
                         <input type="hidden" name="id" value="{{  $portfolio->id   }}">
-                        <input style="background:red; color:white" type="submit" value="hapus">
+                        <input style="background:red; color:white" type="submit" onclick="return confirm('Are you certain to delete this data? This action is permanent.')"
+                        value="delete">
                     </form>
                 </td>
 

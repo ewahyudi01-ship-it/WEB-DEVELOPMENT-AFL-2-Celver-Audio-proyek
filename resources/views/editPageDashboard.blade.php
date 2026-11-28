@@ -18,7 +18,7 @@
         {{-- Container Utama: Dilebarkan ke max-w-7xl agar space kosong kiri-kanan berkurang --}}
         <div class="relative z-20 max-w-7xl mx-auto flex flex-col gap-8">
 
-            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-amber-500/20 pb-6 z-10">
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-amber-500/20 pb-6 z-10 text-shadow-[2px_4px_6px_rgba(0,0,0,0.5)]">
                 <div>
                     <span class="text-xs font-semibold uppercase tracking-widest text-amber-400">
                         Admin-Only Page
@@ -64,7 +64,7 @@
                         </a>
                     </div>
 
-                    {{-- 2. Achievements --}}
+                    {{--  Achievements --}}
                     <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 p-4 rounded-xl bg-neutral-950/70 border border-neutral-800 hover:border-amber-400/40 transition">
                         <div class="flex items-start sm:items-center gap-4">
                             <div class="w-10 h-10 rounded-lg bg-amber-500/15 text-amber-400 flex items-center justify-center font-bold shrink-0">
@@ -82,7 +82,7 @@
                         </a>
                     </div>
 
-                    {{-- 3. About Us --}}
+                    {{--  About Us --}}
                     <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 p-4 rounded-xl bg-neutral-950/70 border border-neutral-800 hover:border-amber-400/40 transition">
                         <div class="flex items-start sm:items-center gap-4">
                             <div class="w-10 h-10 rounded-lg bg-amber-500/15 text-amber-400 flex items-center justify-center font-bold shrink-0">
@@ -100,7 +100,7 @@
                         </a>
                     </div>
 
-                    {{-- 4. protofolio --}}
+                    {{-- protofolio --}}
                     <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 p-4 rounded-xl bg-neutral-950/70 border border-neutral-800 hover:border-amber-400/40 transition">
                         <div class="flex items-start sm:items-center gap-4">
                             <div class="w-10 h-10 rounded-lg bg-amber-500/15 text-amber-400 flex items-center justify-center font-bold shrink-0">

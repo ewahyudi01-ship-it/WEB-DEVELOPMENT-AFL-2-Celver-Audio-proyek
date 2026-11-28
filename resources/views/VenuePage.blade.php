@@ -58,9 +58,9 @@
 
                 <div class="absolute inset-0 -top-10 w-full min-h-full flex flex-col items-center justify-center bg-[#0f0c0a] z-30 drop-shadow-[0_0_8px_rgba(251,191,36,0.3)] overflow-x-hidden">
 
-                    <div class="absolute top-0 -left-20 w-68 h-68 lg:w-126 lg:h-126 bg-amber-600/10 rounded-full blur-3xl pointer-events-none"></div>
-                    <div class="absolute top-1/1 -left-20 w-36 h-36 lg:w-96 lg:h-96 bg-amber-500/10 rounded-full blur-3xl pointer-events-none"></div>
-                    <div class="absolute top-1/2 -right-20 w-56 h-56 lg:w-96 lg:h-96 bg-amber-500/10 rounded-full blur-3xl pointer-events-none"></div>
+                    <div class="absolute top-0 -left-20 w-68 h-68 lg:w-126 lg:h-126 bg-amber-700/10 rounded-full blur-3xl pointer-events-none"></div>
+                    <div class="absolute top-1/1 -left-20 w-36 h-36 lg:w-96 lg:h-96 bg-amber-600/10 rounded-full blur-3xl pointer-events-none"></div>
+                    <div class="absolute top-1/2 -right-20 w-56 h-56 lg:w-96 lg:h-96 bg-amber-700/10 rounded-full blur-3xl pointer-events-none"></div>
 
                     <div class="w-full h-full flex flex-col items-center px-5 py-8 lg:py-30">
                         <div id="aboutSection" class="md:w-1/2">

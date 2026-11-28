@@ -53,6 +53,8 @@ Route::post('/update-achivement/{achivement}', [AchivementController::class, 'up
 
 //formBanner
 Route::get('/dashboard/edit/Bannerpage', [BannerController::class, 'view'])->name('edit-Banner-route');
+Route::post('/dashboard/update/scenery/Bannerpage/{sceneryBanner}', [BannerController::class, 'updateScenery'])->name('update-scenery-banner');
+Route::post('/dashboard/update/interior/Bannerpage/{interiorBanner}', [BannerController::class, 'updateInterior'])->name('update-interior-banner');
 
 
 

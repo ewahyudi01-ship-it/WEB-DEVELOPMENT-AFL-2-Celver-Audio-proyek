@@ -99,9 +99,21 @@
             duration: 1
         });
 
-        gsap.from(".intro-dashboard", {
+        gsap.from(".intro-dashboard-1", {
             y: -10,
             opacity: 1,
+            duration: 1
+        });
+
+        gsap.from(".intro-dashboard-2", {
+            y: -15,
+            opacity: 0,
+            duration: 1
+        });
+
+        gsap.from(".intro-dashboard-3", {
+            y: -20,
+            opacity: 0,
             duration: 1
         });
 

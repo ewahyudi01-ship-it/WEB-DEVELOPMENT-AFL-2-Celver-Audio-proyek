@@ -5,23 +5,31 @@
     <div class="absolute top-0">
         @include('shared.navbar')
     </div>
+
+    @include('shared.rayLightEffect')
+
     
 <section class="min-h-screen bg-[#100e0c] pt-35 py-16 lg:pt-50">
 
     <div class="mx-auto max-w-2xl">
 
-        <div class="mb-8">
-            <p class="text-sm font-medium tracking-[0.3em] text-amber-500 uppercase">
-                Celver Audio / Admin
-            </p>
-            <h1 class="mt-3 text-3xl font-semibold text-white">
-                Add Service
-            </h1>
-            <p class="mt-2 text-sm text-gray-400">
-                Add service information and its image URL.
-            </p>
+        <div class="relative flex w-full items-center justify-between">
+            <div class="mb-8">
+                <p class="text-sm font-medium tracking-[0.3em] text-amber-500 uppercase">
+                    Celver Audio / Admin
+                </p>
+                <h1 class="mt-3 text-3xl font-semibold text-white">
+                    Add Service
+                </h1>
+                <p class="mt-2 text-sm text-gray-400">
+                    Add service information and its image URL.
+                </p>
+            </div>
+            <a href="{{ url()->previous() }}"
+               class="text-xs sm:text-sm text-neutral-400 hover:text-amber-300 border border-neutral-700 hover:border-amber-400/50 rounded-lg px-3 py-1.5 transition">
+                &larr; Back
+            </a>
         </div>
-
 
                                                                 <!-- "multipart" untuk memberi akses laravel upload gambar file dari lokal komputer-->
         <form action="{{ route('save-layanan') }}" method="POST" enctype="multipart/form-data" 
